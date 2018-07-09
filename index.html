@@ -1,0 +1,1588 @@
+<!--HTML-->
+
+<html>
+    <image src='oxweb-logo.gif'></image>
+  <!--CSS-->
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <div id='Intro'>
+  <head>
+ <h1>
+  Machine Learning in Prognostic Decision-Support Systems Study - Med Student Version
+ </h1>
+</head>
+  <h3>Details</h3>
+  <p>
+    Thank you for your interest in our study.</br>
+    The purpose of the study is to investigate the factors that generate value for the use of Machine Learning models in generating prognostic predictions as part of decision-support systems designed to augment and complement the work of medical professionals and diagnosticians.<br/>
+    In particular, we are looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and Decision-Support system design choices affect the confidence of medical experts in such systems.<br/>
+    The study proceeds in two stages:
+    <ol>
+        <li><b>About the model</b>, which introduces and presents information regarding the <b>Neural Network</b> powering our Decision-Support System</li>
+        <li><b>Decision Support</b>, which introduces a mock decision-support system designed to present predicted risk scores for patients</li>
+    </ol> 
+    
+    In this study, we focus on patients who have experienced heart failure, and predict the probability, or risk, of death one year after their heart failure event.<br/><br/>
+    Please click below for full details before you start the survey.</p>
+    <button class = 'showStudyInfo'>Full Study Info</button>
+  <div class='studyInfo' style='font-size:75%;'>
+    <h5>General Information</h5>
+        <p>Machine Learning and Artificial Intelligence models are gaining enthusiasm for their ability to produce highly accurate predictive and analytical insights. However, as many such models, including neural networks, are <i>black-boxes</i>, many fields of practice are reluctant to utilize these models without an ability to interpret their results or understand how a model generates its prediction.</p>
+        <p>As a result, although ML models appear like natural and powerful choices for powering systems that support and augment decision-making processes for medical clinicians, there has so far not been a heavy push to incorporate these into practice in the medical field.</p>
+        <p>The aim of this study is to explore this phenomenon and understand what type of model evidence and interpretability modules will increase comprehension and the confidence levels for users in different machine learning predictive models utilized in decision-support systems for prognostics.</p>
+        <p>We appreciate your interest in participating in this online survey. You have been invited to participate as an expert in medicine, computer science, or related. Please read through these terms before beginning the survey. You will participate by ticking the <i>Start</i> box below. You may ask any questions before taking part by contacting the researcher (details below).</p>
+        <p>We, the University of Oxford, are investigating Machine Learning models in decision-support systems. You will be presented with a sequence of information on a machine learning model, followed by interactive patient scenarios and risk scores as may be presented by a decision-support system relying on the model described. You will then be asked to rate your confidence level with utilizing the system for decision-making purposes and support your answers.</p>
+        <p>The full survey should take about 15-20 minutes. No background knowledge is required. Your results will be utilized to determine the best interpretability modules and types of evidence to present to potential users of medical decision-support systems powered by machine learning models, and will be collected and utilized by the Computer Science and Engineering Departments at Oxford. <b>No personally identifiable information will be collected or shared</b>.</p>
+    <h5>Do I have to take part?</h5>
+        <p>Please note that your participation is voluntary. You may withdraw at any point during the questionnaire for any reason, before submitting your answers, by closing the browser. None of your answers will then be collected.</p>
+    <h5>How will your data be used?</h5>
+        <p>Your answers will be completely anonymous, and we will use all reasonable endeavours to keep them confidential. No personally identifiable, including but not limited to IP address, email address, or name, will be requested or collected.</p>
+        <p>Your answers will be stored in a password-protected file and may be used in academic publications. Your IP address will not be stored. Research data will be stored for a minimum of three years after publication or public release.</p>
+    <h5>Who will have access to your data?</h5>
+        <p>The University of Oxford is the data controller for the purposes of the Data Protection Act 1998.</p>
+        <p>We would like your permission to use your unidentifiable data in future studies, and to share data with other researchers (e.g. in online databases).</p>
+        <p>Any personal information that could identify you will not be collected or be removed before files are shared with other researchers or results are made public.</p>
+        <p>This survey is for an MSc project. The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar of the Oxford Man Institute. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
+    <h5>What if there is a problem?</h5>
+        <p>If you have a concern about any aspect of this project, please speak to the researcher at oren.lahav@gtc.ox.ac.uk who will do his best to answer your query. The researcher should acknowledge your concern within 10 working days and give you an indication of how they intend to deal with it.</p>
+        <p>If you are over 18 and have read the information above and agree to participate with the understanding that the data (including any personal data) you submit will be processed accordingly, please click the ‘Start’ box below to get started. By doing so you will be providing your consent to participate.</p>
+  </div>
+    <h3>Instructions:</h3>
+  <p>
+    Please carefully review the information presented and answer the questions on the screen.
+    <b>Please do not use the back/forward or refresh buttons once you have started the survey.</b>
+  </p>
+  <hr>
+ </div>
+
+ <div class = 'startQuiz'>
+     <h3>Start</h3>
+     <p>If you are ready to begin, please press start:</p>
+     <button class = 'StartButton'>Start</button>
+  </div>
+
+ <div id = 'Rest'></div>
+
+ <div class = 'IntroPart1'>
+        <h2><b>Part 1</b>: About the Model</h2>
+        <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
+        <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your comprehension of, and confidence in, the decision-support system based on it.</p>
+        <p>Click 'Next' to proceed</p>
+        <button class='StartPart1Button'>Next</button>
+ </div>
+
+ <div class = 'Part1'>
+    <h2><b>Part 1</b>: About the Model</h2>
+    <p>Please consider the following:</p>
+
+    <div class = 'Evidence1'>
+        <h3>Data</h3>
+        <p>The model was trained using the Meta-analysis Global Group in Chronic Heart Failure (MAGGIC) data-set, which compiled patient data from 30 studies including both randomized clinical trials and observational registries.</p>
+        <p>The data set included <b>30,389</b> patients who have experienced a <b>heart failure</b> event. Of these, 18.8% died within 1 year of experiencing heart failure.</p>
+        <p>31 patient characteristics were collected, including:</p>
+        <ul>
+            <li><b>Basic patient details</b>: Age, gender, ethnicity</li>
+            <li><b>Patient habits</b>: BMI, Smoking, Diabetes condition</li>
+            <li><b>Physical symptoms</b>: Shortness of breath (at rest and exercise), rales</li>
+            <li><b>Relevant prescriptions</b>: ACE inhibitors/ARB, Beta blockers</li>
+            <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
+            <li><b>New York Heart Association Score</b> (Class I-IV)</li>
+        </ul>
+        <hr style="border-top: dotted 1px;" />
+        <div class = 'E1Q' class='evForm'>
+                <p>How useful do you find this information about the data used to train the model powering a decision-support system for heart failure patients?</p>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                <input type='radio' name='E1Q' class='E1Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br>
+                <p>Please provide any comments or reasons supporting your answer:</p>
+                <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E1QText' name='E1QText'></textarea><br/>
+                <button class = 'evFormButton'>Next</button>
+        </div>
+    </div>
+
+    <div class = 'Evidence2'>
+            <h3>Model Training and Implementation</h3>
+            <p>The model utilized was a Neural Network, a sophisticated deep learning algorithm that has seen increased attention in recent years, as multiple studies have shown it to vastly outperform simpler linear models and other methods that have been traditionally utilized to generate risk scores in medicine.</p>
+            <p>A neural network is a Machine Learning algorithm inspired by the human brain, utilizing connected nodes organized in hidden layers. The network uses optimization techniques and non-linear activation functions to automatically discover complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
+            <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
+            <p>The network takes in a large amount of data, in the form of patient characteristics, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
+            <p>The Neural Network we utilized contained 2 hidden layers of 100 and 20 nodes respectively. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
+            <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run.</p>
+            <hr style="border-top: dotted 1px;" />
+            <div class = 'E2Q' class='evForm'>
+                    <p>How useful do you find this information about the architecture and training methodology behind the model powering a decision-support system for heart failure patients?</p>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                    <input type='radio' name='E2Q' class='E2Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br> 
+                    <p>Please provide any comments or reasons supporting your answer:</p>
+                    <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E2QText' name='E2QText'></textarea><br/>
+                    <button class = 'evFormButton'>Next</button>
+            </div>
+        </div>
+
+        <div class = 'Evidence3'>
+                <h3>Model Accuracy</h3>
+                <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
+                <p>The model's AUC-ROC (receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs.<br/>This value is much higher than the best linear regression model, which achieves AUC-ROC of 0.537. It is also significantly higher than the AUC-ROC of the MAGGIC Risk Score, which is 0.6933. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>.</p>
+                <p>The model's ROC curve is below:</p>
+                <p style="text-align:center;"><img src="NNROC.png" style="width:250px;"></p>
+                <p>In addition, the model achieves an AUC-PR (precision recall curve) of <b>0.376</b>, higher than a Linear Regression model (0.250) and the MAGGIC Risk Score (0.342). For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>. </p>
+                <p>These metrics showcase the neural network model's high accuracy, especially when compared with alternative, simpler statistical models, and established risk scores.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E3Q' class='evForm'>
+                        <p>How useful do you find this information about the accuracy of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E3Q' class='E3Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br>
+                        <p>Please provide any comments or reasons supporting your answer:</p>
+                        <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E3QText' name='E3QText'></textarea><br/>
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+            </div>
+
+        <div class = 'Evidence4'>
+                <h3>Model Interpretation: Stratified Linear Approximation</h3>
+                <p>Black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, including linear regression models.</p>
+                <p>To create local approximations, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+                <p>The Root Mean-Sqaured Error between the neural network model and the linear approximation is 0.036, suggesting the 2 models are very close.</p>
+                <p>Below is a summary of the coefficients for each local linear model:</p>
+                <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
+                <p>The value of each characteristic’s coefficient represents their contribution to the variability in predicted patient risk score.</p>
+                <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E4Q' class='evForm'>
+                        <p>How useful do you find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E4Q' class='E4Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br>
+                        <p>Please provide any comments or reasons supporting your answer:</p>
+                        <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E4QText' name='E4QText'></textarea><br/>
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+        </div>
+
+        <div class = 'Evidence5'>
+                <h3>Model Interpretation: Decision Tree</h3>
+                <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
+                <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+                <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
+                <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
+                <button class = 'treeButton' style='font-size:16px'>Show Decision Trees</button>
+                <div class = 'hideTree'>
+                    <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
+                </div>
+                <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
+                <hr style="border-top: dotted 1px;" />
+                <div class = 'E5Q' class='evForm'>
+                        <p>How useful do you find this decision-tree approximation of the model powering a decision-support system for heart failure patients?</p>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=1> 2: <b>Somewhat useful</b> - This information contributes to my understanding and makes me somewhat more confident in the model and decision-support system<br>
+                        <input type='radio' name='E5Q' class='E5Q' class='evForm' value=2> 3: <b>Very useful</b> - This information improves my understanding and makes me significantly more confident in the model and decision-support system <br> 
+                        <p>Please provide any comments or reasons supporting your answer:</p>
+                        <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'E5QText' name='E5QText'></textarea><br/>
+                        <button class = 'evFormButton'>Next</button>
+                </div>
+        </div>
+
+        <div class = 'EvidenceFinal'>
+                <h4>Rate your confidence</h4>
+                <p>Please consider the following question based on <b>all</b> the Model information and evidence seen so far:</p>
+                <div class = 'EFinal' class='evForm'>
+                        <p>Based on the information seen so far, how would you rate your confidence in the machine learning model and the decision-support system based on it?</p>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=0> 1: <b>Not at all confident</b>, would not even consider looking at the model and its prediction as part of my decision-making process<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=1> 2: <b>Not very confident</b>, unlikely to consider model<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=2> 3: <b>Somewhat confident</b>, may consult model but unlikely to rely on it in any way <br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=3> 4: <b>Fairly confident</b>, likely to consult model and consider its predicted score<br>
+                        <input type='radio' name='EFinal' class='EFinal' class='evForm' value=4> 5: <b>Very confident</b>, almost certain to consult model together with other tools when considering further medical decisions <br><br> 
+                        Please explain why you have selected the answer above, providing more detail about:
+                        <ul>
+                            <li>How the model details and evidence shown has affected your confidence in a decision-support system</li>
+                            <li>Which information was most and least effective</li>
+                            <li>What else you would have liked to see</li>
+                        </ul>
+                        <textarea comments cols=100 rows=5 placeholder='Details...' class = 'evFinalText' name='evFinalText'></textarea><br/>
+                        <button class = 'evFinalButton'>Next</button>
+                </div>
+        </div>
+
+</div>
+
+
+ <div class = 'IntroPart2'>
+        <h2><b>Part 2</b>: Decision Support System</h2>
+        <p>The following diagram explains the purpose and workings of a Decision Support System (DSS) powered by the Neural Network method described in Part 1:</p>
+        <p style="text-align:center;"><img src="DSSDiagram.png" style="width:700px;"></p>
+        <p>Note that the DSS is based on the Neural Network trained on data of over 30,000 patients. As new patients consult with their doctors, the clinician may refer to the Decision-Support System. The DSS will produce a predicted risk score based on the patient's characteristics, and may additionally output relevant local, high-interpretable linear or decision-tree models. The information produced may be utilized by a clinician to inform medical actions and impact patient outcomes.</p><br/>
+        <p>Starting on the next screen, you will be presented with a series of patients.</p>
+        <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
+        <p>Each patient will be accompanied by a risk score generated using the Neural Network model discussed previously. In addition, medical information about the individual patients will be presented as well.</p>
+        <p>Please evaluate this information, and rate your satisfaction with the model and the Decision Support System as a whole.</p>
+        <p>Click 'Next' to proceed</p>
+        <button class='StartPart2'>Next</button>
+ </div>
+
+ <div class = 'Part2'>
+     <h2><b>Part 2</b>: Decision Support System</h2>
+
+    <div class = 'Patient1' class = 'P1'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
+            <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
+            <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
+            The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
+            <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
+            His sodium level is 145, and creatine is 64.</p>-->
+            <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
+            <p>Adam admits to being an occasional smoker. He does not suffer from diabetes.</p>
+
+        <div class='P1INT'>
+            <hr style="border-top: dotted 1px;" />
+            <p>Click below to interact with the system</p>
+            <button class = 'P1Button' style='font-size:16px'>Interact with Decision Support System</button>
+            <div class = 'Patient1DSS' class = 'P1'>
+                <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <select class = 'P1S1'>
+                        <option value='0'>Smoker</option>
+                        <option value='1'>Non-smoker</option>
+                </select>
+                <select class = 'P1S2'>
+                        <option value='0'>No prescription</option>
+                        <option value='1'>ACE Inhibitors</option>
+                        <option value='2'>Beta Blockers</option>
+                </select>
+                <button class = 'P1PButton'>Calculate</button><br><br>
+                Predicted Risk Score: 
+                <div class = 'P1P1'>15.9%</div>
+                <div class = 'P1P2' class = 'P1P'>12.9%</div>
+                <div class = 'P1P3' class = 'P1P'>13.4%</div>
+                <div class = 'P1P4' class = 'P1P'>15.1%</div>
+                <div class = 'P1P5' class = 'P1P'>12.2%</div>
+                <div class = 'P1P6' class = 'P1P'>12.6%</div>
+            </div>
+        </div>
+        
+        <div class='P1SLIM'>
+                <hr style="border-top: dotted 1px;" />
+                <P>Click below to view the details of a linear approximation model for Adam's Risk Strata of 0-20%</P>
+                <button class = 'P1Button3' style='font-size:16px'>Show Local Linear Approximation</button>
+                <div class = 'P1SLIMH'>
+                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
+                    <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                    <p>Below are the coefficients for all significant characteristics of Adam's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                    <p style="text-align:center;"><img src="NNSLIM0.png" style="width:200px;"></p>
+                </div>
+        </div>
+
+        <div class='P1TREE'>
+                <hr style="border-top: dotted 1px;" />
+                <P>Click below to view the details of a decision tree approximation model for Adam's Risk Strata of 0-20%</P>
+                <button class = 'P1Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
+                <div class = 'P1TREEH'>
+                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
+                    <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                    <p>Below is a representation of Adam's local depth-3 decision tree approximation.</p>
+                    <p style="text-align:center;"><img src="NNTREE0.png" style="width:700px;"></p>
+                </div>
+        </div>
+
+        <div class='P1OUT'>
+            <hr style="border-top: dotted 1px;" />
+            <p>Click below to find the patient's status 1 year after the heart failure event</p>
+            <button class = 'P1Button2' style='font-size:16px'>Show Patient Outcome</button>
+            <div class='P1O'>
+                <p><i>Patient Adam did not die in the year following diagnosis and in fact has survived for 7 years past his initial heart failure event.</i></p>
+            </div>
+        </div>
+
+        <hr style="border-top: dotted 1px;" />
+        <div class = 'P1Q'>
+            <p>Based on the information seen so far, including <b>Patient Adam</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                    <input type='radio' name='P1Q' class='P1Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                    <p>Please provide any comments or reasons supporting your answer:</p>
+                    <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P1QText' name='P1QText'></textarea><br/>
+                    <button class = 'patientFormButton'>Next</button>
+        </div>
+
+    </div>
+
+    <div class = 'Patient2'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Betty.png" style="width:75px;"></p>
+            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
+            <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
+            The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
+            Her sodium level is 138, and creatine is 132.6.</p>-->
+            <p>Betty has not been prescribed either ACE inhibitors or Beta blockers.</p>
+            <p>Betty does not smoke, and does not suffer from diabetes. She does suffer from angina.</p>
+    
+            <div class='P2INT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to interact with the system</p>
+                <button class = 'P2Button' style='font-size:16px'>Interact with Decision Support System</button>
+                <div class = 'Patient2DSS' class = 'P2'>
+                    <p>Examine how the following factors might impact Betty's predicted risk score, based on the Neural Network model utilized:</p>
+                    <select class = 'P2S1'>
+                            <option value='0'>New York Association Score Class IV</option>
+                            <option value='1'>New York Association Score Class III</option>
+                    </select>
+                    <select class = 'P2S2'>
+                            <option value='0'>No prescription</option>
+                            <option value='1'>ACE Inhibitors</option>
+                            <option value='2'>Beta Blockers</option>
+                    </select>
+                    <button class = 'P2PButton'>Calculate</button><br><br>
+                    Predicted Risk Score: 
+                    <div class = 'P2P1'>83.5%</div>
+                    <div class = 'P2P2' class = 'P2P'>77.2%</div>
+                    <div class = 'P2P3' class = 'P2P'>77.6%</div>
+                    <div class = 'P2P4' class = 'P2P'>68.4%</div>
+                    <div class = 'P2P5' class = 'P2P'>61.7%</div>
+                    <div class = 'P2P6' class = 'P2P'>62.3%</div>
+                </div>
+            </div>
+
+            <div class='P2SLIM'>
+                    <hr style="border-top: dotted 1px;" />
+                    <P>Click below to view the details of a linear approximation model for Betty's Risk Strata of 80-100%</P>
+                    <button class = 'P2Button3' style='font-size:16px'>Show Local Linear Approximation</button>
+                    <div class = 'P2SLIMH'>
+                        <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
+                        <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                        <p>Below are the coefficients for all significant characteristics of Betty's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p style="text-align:center;"><img src="NNSLIM4.png" style="width:200px;"></p>
+                    </div>
+            </div>
+
+            <div class='P2TREE'>
+                <hr style="border-top: dotted 1px;" />
+                <P>Click below to view the details of a decision tree approximation model for Betty's Risk Strata of 80-100%</P>
+                <button class = 'P2Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
+                <div class = 'P2TREEH'>
+                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
+                    <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                    <p>Below is a representation of Betty's local depth-3 decision tree approximation.</p>
+                    <p style="text-align:center;"><img src="NNTREE4.png" style="width:700px;"></p>
+                </div>
+            </div>
+
+            <div class='P2OUT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to find the patient's status 1 year after the heart failure event</p>
+                <button class = 'P2Button2' style='font-size:16px'>Show Patient Outcome</button>
+                <div class='P2O'>
+                    <p><i>Patient Betty unfortunately passed away 3 months following her heart failure event.</i></p>
+                </div>
+            </div>
+
+            <hr style="border-top: dotted 1px;" />
+            <div class = 'P2Q'>
+                    <p>Based on the information seen so far, including <b>Patient Betty</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P2Q' class='P2Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <p>Please provide any comments or reasons supporting your answer:</p>
+                            <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P2QText' name='P2QText'></textarea><br/>
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+    <div class = 'Patient3'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
+            <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
+            <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
+                The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
+            <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
+            Her sodium level is 138, and creatine is 107.</p>-->
+            <p>Clara has been prescribed ACE inhibitors.</p>
+            <p>Clara is diabetic, and smokes regularly.</p>
+    
+            <div class='P3INT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to interact with the system</p>
+                <button class = 'P3Button' style='font-size:16px'>Interact with Decision Support System</button>
+                <div class = 'Patient3DSS' class = 'P3'>
+                    <p>Examine how the following factors might impact Clara's predicted risk score, based on the Neural Network model utilized:</p>
+                    <select class = 'P3S1'>
+                        <option value='0'>Smoker</option>
+                        <option value='1'>Non-smoker</option>
+                    </select>
+                    <select class = 'P3S2'>
+                        <option value='0'>BMI of 33</option>
+                        <option value='1'>BMI of 30</option>
+                        <option value='2'>BMI of 27</option>
+                    </select>
+                    <button class = 'P3PButton'>Calculate</button><br><br>
+                    Predicted Risk Score: 
+                    <div class = 'P3P1'>60.5%</div>
+                    <div class = 'P3P2' class = 'P3P'>61.0%</div>
+                    <div class = 'P3P3' class = 'P3P'>61.3%</div>
+                    <div class = 'P3P4' class = 'P3P'>54.2%</div>
+                    <div class = 'P3P5' class = 'P3P'>54.6%</div>
+                    <div class = 'P3P6' class = 'P3P'>54.9%</div>
+                </div>
+            </div>
+
+            <div class='P3SLIM'>
+                    <hr style="border-top: dotted 1px;" />
+                    <P>Click below to view the details of a linear approximation model for Clara's Risk Strata of 60-80%</P>
+                    <button class = 'P3Button3' style='font-size:16px'>Show Local Linear Approximation</button>
+                    <div class = 'P3SLIMH'>
+                        <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
+                        <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                        <p>Below are the coefficients for all significant characteristics of Clara's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p style="text-align:center;"><img src="NNSLIM3.png" style="width:200px;"></p>
+                    </div>
+            </div>
+
+            <div class='P3TREE'>
+                <hr style="border-top: dotted 1px;" />
+                <P>Click below to view the details of a decision tree approximation model for Clara's Risk Strata of 60-80%</P>
+                <button class = 'P3Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
+                <div class = 'P3TREEH'>
+                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
+                    <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                    <p>Below is a representation of Clara's local depth-3 decision tree approximation.</p>
+                    <p style="text-align:center;"><img src="NNTREE3C.png" style="width:700px;"></p>
+                </div>
+            </div>
+
+            <div class='P3OUT'>
+                    <hr style="border-top: dotted 1px;" />
+                <p>Click below to find the patient's status 1 year after the heart failure event</p>
+                <button class = 'P3Button2' style='font-size:16px'>Show Patient Outcome</button>
+                <div class='P3O'>
+                    <p><i>Patient Clara was alive one year after her heart failure event. However, she passed away 2 years later.</i></p>
+                </div>
+            </div>
+
+            <hr style="border-top: dotted 1px;" />
+            <div class = 'P3Q'>
+                    <p>Based on the information seen so far, including <b>Patient Clara</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P3Q' class='P3Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <p>Please provide any comments or reasons supporting your answer:</p>
+                            <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P3QText' name='P3QText'></textarea><br/>
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+    <div class = 'Patient4'>
+            <p>Please examine the following patient:</p>
+            <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
+            <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
+                The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
+            His sodium level is 131, and creatine is 135.</p>-->
+            <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
+            <p>Drew is diabetic, but Drew does does not effectively manage his diabetes. He is a non-smoker.</p>
+    
+            <div class='P4INT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to interact with the system</p>
+                <button class = 'P4Button' style='font-size:16px'>Interact with Decision Support System</button>
+                <div class = 'Patient4DSS' class = 'P4'>
+                    <p>Examine how the following factors might impact Drew's predicted risk score, based on the Neural Network model utilized:</p>
+                    <select class = 'P4S1'>
+                        <option value='0'>Diabetes - unmanaged</option>
+                        <option value='1'>Diabetes - managed</option>
+                    </select>
+                    <select class = 'P4S2'>
+                        <option value='0'>Age 70</option>
+                        <option value='1'>Age 80</option>
+                    </select>
+                    <button class = 'P4PButton'>Calculate</button><br><br>
+                    Predicted Risk Score: 
+                    <div class = 'P4P1'>72.0%</div>
+                    <div class = 'P4P2' class = 'P4P'>77.8%</div>
+                    <div class = 'P4P3' class = 'P4P'>64.4%</div>
+                    <div class = 'P4P4' class = 'P4P'>73.9%</div>
+            </div>
+            </div>
+
+            <div class='P4SLIM'>
+                    <hr style="border-top: dotted 1px;" />
+                    <P>Click below to view the details of a linear approximation model for Drew's Risk Strata of 60-80%</P>
+                    <button class = 'P4Button3' style='font-size:16px'>Show Local Linear Approximation</button>
+                    <div class = 'P4SLIMH'>
+                        <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
+                        <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                        <p>Below are the coefficients for all significant characteristics of Drew's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p style="text-align:center;"><img src="NNSLIM3.png" style="width:200px;"></p>
+                    </div>
+            </div>
+
+            <div class='P4TREE'>
+                <hr style="border-top: dotted 1px;" />
+                <P>Click below to view the details of a decision tree approximation model for Drew's Risk Strata of 60-80%</P>
+                <button class = 'P4Button4' style='font-size:16px'>Show Decision Tree Approximation</button>
+                <div class = 'P4TREEH'>
+                    <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
+                    <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
+                    <p>Below is a representation of Drew's local depth-3 decision tree approximation.</p>
+                    <p style="text-align:center;"><img src="NNTREE3D.png" style="width:700px;"></p>
+                </div>
+            </div>
+
+            <div class='P4OUT'>
+                <hr style="border-top: dotted 1px;" />
+                <p>Click below to find the patient's status 1 year after the heart failure event</p>
+                <button class = 'P4Button2' style='font-size:16px'>Show Patient Outcome</button>
+                <div class='P4O'>
+                    <p><i>One year after his heart failure event, Patient Drew was alive. He unfortunately passed away 16 months following his heart failure event.</i></p>
+                </div>
+            </div>
+            
+            <hr style="border-top: dotted 1px;" />
+            <div class = 'P4Q'>
+                    <p>Based on the information seen so far, including <b>Patient Drew</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P4Q' class='P4Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <p>Please provide any comments or reasons supporting your answer:</p>
+                            <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P4QText' name='P4QText'></textarea><br/>
+                            <button class = 'patientFormButton'>Next</button>
+            </div>
+    </div>
+
+    
+
+ </div>
+
+<div class='rateML'>
+    <h2>Part 3: Reflection</h2>
+    <p>Based on both the Model Information seen in Part 1 and the patient scenarios seen in Part 2, please answer the following:</p>
+    <p><b>Do you feel that the neural network model presented, which was used to power a decision-support system, augments your judgement and constitutes a valuable contribution to medical decision-making processes?</b></p>
+    <div class = 'rateForm'>
+        <input type='radio' class='rateML' name='rateML' value=0>Yes<br>
+        <input type='radio' class='rateML' name='rateML' value=0>No<br><br>
+        Please explain why or why not:<br/>
+        <textarea comments cols=100 rows=5 placeholder='Details...' class = 'RateMLText' name='RateMLText'></textarea><br/>
+        <button class = 'ReflectButton'>Next</button>
+    </div>
+    <br />
+    
+</div>
+
+ <div class = 'commentSection'>
+    <h2>Part 4: Comments</h2>
+    <p>Please leave any feedback, comments, or concerns about the survey you have just completed.</p>
+    <p>In particular, you may address the following:
+        <ul>
+            <li>What are your general thoughts of Machine Learning in decision-support systems for prognostic predictive purposes?</li>
+            <li>Was any of the model evidence and other information shown in Part 1 particularly effective or ineffective? Why?</li>
+            <li>Were the patient scenarios shown in Part 2 helpful in developing your confidence in the underlying model and system? Why or why not?</li>
+            <li>Were there any areas of the survey you felt were confusing or potentially misleading?</li>
+        </ul>
+    </p>
+    <p><b>Important:</b> Do <b>not</b> include any personally identifiable information, such as name or email address, in your answer below.</p>
+    <p>You may also email the primary researcher at oren.lahav@gtc.ox.ac.uk.</p>
+    <form class = 'commentForm' id = 'Feedback'>
+        <textarea comments cols=120 rows=5 placeholder='Feedback:' class='feedbacktext' name='feedbacktext' form = 'Feedback'></textarea>
+        <br />
+        <button class = 'FeedbackButton'>Submit</button>
+    </form>
+ </div>
+
+ <div class = 'finished'>
+     <h2>Finished!!!</h2>
+    <p>
+        Thank you very much for taking our survey. Your anonymous results will be used as part of a statistical and ML analysis to determine the best evidence to present to potential users of decision-support systems that rely on sophisticated ML models.<br/>
+        We trust that your efforts will be highly significant in helping design Decision-Support systems for prognostic predictions based on Machine Learning models that are useful and make valuable contributions to prognostics and medicine in general.
+        Thank you!
+    </p>
+</div>
+ 
+<!--CODE-->
+
+<!--Setup Firebase-->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCJ-RkQ0QfbX_NQrNZ4bQ636jhSiiYH6Ys",
+    authDomain: "mldecisionsystem.firebaseapp.com",
+    databaseURL: "https://mldecisionsystem.firebaseio.com",
+    projectId: "mldecisionsystem",
+    storageBucket: "",
+    messagingSenderId: "429667121676"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--Download jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!--Actual code-->
+  <script>
+    
+    //Setup Sequence:
+    var sequenceData = [
+        {
+            context : 0,
+            contextCounter : 0,
+            contextData : 
+            [
+                {
+                    section: 1, possibleSequences:[
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                },
+                {
+                    section: 2, possibleSequences:[
+                        {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                }
+            ]
+        },
+        {
+            context : 1,
+            contextCounter : 0,
+            contextData : 
+            [
+            {
+                    section: 1, possibleSequences:[
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                },
+                {
+                    section: 2, possibleSequences:[
+                        {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                }
+            ]
+        },
+        {
+            context : 2,
+            contextCounter : 0,
+            contextData : 
+            [
+            {
+                    section: 1, possibleSequences:[
+                        {seqCode:'Part1A', seq: [1,0,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1B', seq: [1,0,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1C', seq: [1,0,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1D', seq: [1,0,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1E', seq: [1,1,1,0,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1F', seq: [1,1,1,0,1], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1G', seq: [1,1,1,1,0], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part1H', seq: [1,1,1,1,1], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                },
+                {
+                    section: 2, possibleSequences:[
+                        {seqCode:'Part2A', seq : ['A'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2B', seq : ['B'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2C', seq : ['C'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
+                        {seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                    ]
+                }
+            ]
+        }
+    ];
+
+    var dbAccesses = 1;
+
+    //Function to choose, based on UCB, which sequence to show
+    function chooseSequence()
+    {
+        
+        //First things first - get latest prob from DB
+        var dbRefProbs = firebase.database().ref('Probs');
+
+
+        //Code to reset probs when we're testing something new - comment out
+
+        returnData = 
+                    {
+                        name:'X',
+                        data:sequenceData,
+                        accessCount:0
+                    };
+                    console.log(returnData);
+        
+                    //Log the updates
+                    dbRefProbs.set(returnData); 
+
+        dbRefProbs.once('value', (response) => {
+            
+                dbData = response.val().data;
+                dbAccesses = response.val().accessCount;
+                console.log(dbData);
+                console.log('Accesses: '+dbAccesses);
+
+                //For! Each context:
+
+                for (var ctxt = 0; ctxt < dbData.length; ctxt++)
+                {
+                    contextSeqData = dbData[ctxt].contextData;
+                    //console.log('Context Data:')
+                    //console.log(contextSeqData)
+
+                    contextSeqToRun = [];
+                    contextRunSummary = [];
+
+                    //For! Each section:
+                    for (var sect = 0; sect < contextSeqData.length; sect++)
+                    {
+                        //console.log('Section?');
+                        //console.log(sect);
+                        //console.log(contextSeqData[sect].possibleSequences);
+
+                        topSeq = [];
+                        topCode = '';
+                        UCBTrack = 0;
+
+                        possSeqs = contextSeqData[sect].possibleSequences;
+                    
+                        //Cycle through sequences
+                        for (var pSeq = 0; pSeq < possSeqs.length; pSeq++)
+                        {
+                            //If UCB is higher than the previous one, set this sequence to be chosen
+                            if (possSeqs[pSeq].currentUCB >= UCBTrack)
+                            {
+                                topCode = possSeqs[pSeq].seqCode;
+                                topSeq = possSeqs[pSeq].seq;
+                                UCBTrack = possSeqs[pSeq].currentUCB;
+                            }
+                        }
+
+                        contextSeqToRun = contextSeqToRun.concat(topSeq);
+                        contextRunSummary.push({
+                            sectionNo: contextSeqData[sect].section,
+                            seqCode : topCode,
+                            seqDesc : topSeq
+                        });
+
+                    }
+
+
+
+                    seqToRun.push(contextSeqToRun);
+                    runSummary.push({contextNo: ctxt, seqData: contextRunSummary});
+
+
+                }
+
+                console.log('This trial we shall run:')
+                console.log(seqToRun);
+                console.log(runSummary);
+        });
+    }
+
+
+    //Function to update UCB once survey is done
+
+    function updateUCB(currentSequences)
+    {
+        probDataToReturn = [];
+
+        for(ctxt in currentSequences)
+        {
+            if(currentSequences[ctxt].context == userContext)
+            {
+                ctxtContent = currentSequences[ctxt];
+                upAccesses = ctxtContent.contextCounter + 1;
+                contextData = ctxtContent.contextData;
+
+                newContextData = []
+
+                for(d in contextData)
+                {
+
+                        if(d == 0)  
+                        {
+                            newAns = parseInt(part1FinalAns);
+                            seqCheck = part1Seq;
+                        }
+                        else        
+                        {
+                            newAns = parseInt(part2FinalAns);
+                            seqCheck = 'Part2'+part2Seq;
+                        }
+
+                        ctxtValues = contextData[d].possibleSequences;
+                        //console.log(ctxtValues);
+
+                        upPossSeq = [];
+
+                        for(v in ctxtValues)
+                        {
+                            curSeq = ctxtValues[v];
+                            //console.log('curSeq')
+                            //console.log(curSeq);
+
+                            //Update the sequence we're actually at:
+                            if(curSeq.seqCode == seqCheck)
+                            {
+                                
+                                upTries = curSeq.numTries + 1;
+                                upMean = ((curSeq.currentMean*curSeq.numTries) + newAns)/upTries;
+                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
+
+                                //Check for NaN:
+                                if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
+                            }
+                            else
+                            {
+                                upTries = curSeq.numTries;
+                                upMean = curSeq.currentMean;
+                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
+
+                                //Check for NaN:
+                                if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
+                            }
+
+                            upSeq = {
+                            seqCode : curSeq.seqCode,
+                            seq : curSeq.seq,
+                            numTries : upTries,
+                            currentMean : upMean,
+                            currentUCB : upUCB
+                            };
+
+                            upPossSeq.push(upSeq);
+                        }
+
+                        upSect = {possibleSequences:upPossSeq, section:2};
+                        newContextData.push(upSect);
+                }
+                newProbD = {context:0, contextCounter : upAccesses, contextData : newContextData};
+
+                probDataToReturn.push(newProbD);
+
+            }
+            else
+            {
+                probDataToReturn.push(currentSequences[ctxt]);
+            }
+        }
+        console.log('final UCB');
+        console.log(probDataToReturn)
+
+        return probDataToReturn;
+    }
+
+    //Variables to store data:
+    userContext = 0;
+    dataReturn = [];
+    whys = [];
+    rating = {};
+    var initialSeqData;
+    var part1Seq;
+    var part2Seq;
+    part1Ans = [];
+    part1Reasons = [];
+    part2Ans = [];
+    part2Reasons = [];
+    var part1FinalAns;
+    var part1FinalReason;
+    var part2FinalAns;
+    seqToRun = [];
+    runSummary = [];
+    Part1Length = 5;
+    evidenceSeen = 0;
+    TotalNumPatients = 4;
+    patientsSeen = 0;
+
+    interactP1 = 0;
+    interactP2 = 0;
+    interactP3 = 0;
+    interactP4 = 0;
+    SLIM1 = 0;
+    SLIM2 = 0;
+    SLIM3 = 0;
+    SLIM4 = 0;
+    TREE1 = 0;
+    TREE2 = 0;
+    TREE3 = 0;
+    TREE4 = 0;
+    outcomeP1 = 0;
+    outcomeP2 = 0;
+    outcomeP3 = 0;
+    outcomeP4 = 0;
+
+    //Set code to run once page is loaded
+    $(document).ready(function() {
+
+        //Prepare things to display:
+        
+        //Figure out the sequence
+        chooseSequence();
+
+        //All the action starts here!
+
+        //Variables:
+        
+
+        //Hide all questions and sections:
+        $('.question').hide();
+        $('.section').hide();
+        $('.finished').hide();
+        $('.studyInfo').hide();
+        $('.commentSection').hide();
+        $('.whyLow').hide();
+        $('.whyHigh').hide();
+        $('.rateML').hide();
+        $('.IntroPart1').hide();
+        $('.Part1').hide();
+        $('.Evidence1').hide();
+        $('.Evidence2').hide();
+        $('.Evidence3').hide();
+        $('.Evidence4').hide();
+        $('.Evidence5').hide();
+        $('.hideTree').hide();
+        $('.EvidenceFinal').hide();
+
+        $('.IntroPart2').hide();
+        $('.Part2').hide();
+        $('.Patient1').hide();
+        $('.Patient1DSS').hide();
+        $('.P1P2').hide();
+        $('.P1P3').hide();
+        $('.P1P4').hide();
+        $('.P1P5').hide();
+        $('.P1P6').hide();
+        $('.Patient2').hide();
+        $('.Patient2DSS').hide();
+        $('.P2P2').hide();
+        $('.P2P3').hide();
+        $('.P2P4').hide();
+        $('.P2P5').hide();
+        $('.P2P6').hide();
+        $('.Patient3').hide();
+        $('.Patient3DSS').hide();
+        $('.P3P2').hide();
+        $('.P3P3').hide();
+        $('.P3P4').hide();
+        $('.P3P5').hide();
+        $('.P3P6').hide();
+        $('.Patient4').hide();
+        $('.Patient4DSS').hide();
+        $('.P4P2').hide();
+        $('.P4P3').hide();
+        $('.P4P4').hide();
+        $('.P4P5').hide();
+        $('.P4P6').hide();
+        $('.P1O').hide();
+        $('.P2O').hide();
+        $('.P3O').hide();
+        $('.P4O').hide();
+        $('.P1INT').hide();
+        $('.P1OUT').hide();
+        $('.P1SLIM').hide();
+        $('.P1SLIMH').hide();
+        $('.P1TREE').hide();
+        $('.P1TREEH').hide();
+        $('.P2INT').hide();
+        $('.P2OUT').hide();
+        $('.P2SLIM').hide();
+        $('.P2SLIMH').hide();
+        $('.P2TREE').hide();
+        $('.P2TREEH').hide();
+        $('.P3INT').hide();
+        $('.P3OUT').hide();
+        $('.P3SLIM').hide();
+        $('.P3SLIMH').hide();
+        $('.P3TREE').hide();
+        $('.P3TREEH').hide();
+        $('.P4INT').hide();
+        $('.P4OUT').hide();
+        $('.P4SLIM').hide();
+        $('.P4SLIMH').hide();
+        $('.P4TREE').hide();
+        $('.P4TREEH').hide();
+
+
+        //Show full survey details
+        $('.showStudyInfo').on('click', function() {
+            $('.studyInfo').toggle();
+        })
+
+        //Show full tree
+        $('.treeButton').on('click', function() {
+            $('.hideTree').toggle();
+        })
+
+        //Button Toggles
+        $('.P1Button').on('click', function() {
+            $('.Patient1DSS').toggle();
+        })
+
+        $('.P2Button').on('click', function() {
+            $('.Patient2DSS').toggle();
+        })
+
+        $('.P3Button').on('click', function() {
+            $('.Patient3DSS').toggle();
+        })
+
+        $('.P4Button').on('click', function() {
+            $('.Patient4DSS').toggle();
+        })
+
+        $('.P1Button2').on('click', function() {
+            $('.P1O').toggle();
+            outcomeP1 = 1;
+        })  
+
+        $('.P2Button2').on('click', function() {
+            $('.P2O').toggle();
+            outcomeP2 = 1;
+        })   
+
+        $('.P3Button2').on('click', function() {
+            $('.P3O').toggle();
+            outcomeP3 = 1;
+        })   
+
+        $('.P4Button2').on('click', function() {
+            $('.P4O').toggle();
+            outcomeP4 = 1;
+        })
+        
+        $('.P1Button3').on('click', function() {
+            $('.P1SLIMH').toggle();
+            SLIM1 = 1;
+        })  
+
+        $('.P2Button3').on('click', function() {
+            $('.P2SLIMH').toggle();
+            SLIM2 = 1;
+        })  
+
+        $('.P3Button3').on('click', function() {
+            $('.P3SLIMH').toggle();
+            SLIM3 = 1;
+        })  
+
+        $('.P4Button3').on('click', function() {
+            $('.P4SLIMH').toggle();
+            SLIM4 = 1;
+        })  
+
+        $('.P1Button4').on('click', function() {
+            $('.P1TREEH').toggle();
+            TREE1 = 1;
+        }) 
+
+        $('.P2Button4').on('click', function() {
+            $('.P2TREEH').toggle();
+            TREE2 = 1;
+        }) 
+
+        $('.P3Button4').on('click', function() {
+            $('.P3TREEH').toggle();
+            TREE3 = 1;
+        })    
+
+        $('.P4Button4').on('click', function() {
+            $('.P4TREEH').toggle();
+            TREE4 = 1;
+        })  
+
+        $('.P1PButton').on('click', function() {
+            interactP1 = 1;
+            $('.P1P1').hide();
+            $('.P1P2').hide();
+            $('.P1P3').hide();
+            $('.P1P4').hide();
+            $('.P1P5').hide();
+            $('.P1P6').hide();
+
+            if($('.P1S1').val()==0)
+            {
+                if($('.P1S2').val()==0)
+                {
+                    $('.P1P1').show();
+                }
+                else if($('.P1S2').val()==1)
+                {
+                    $('.P1P2').show();
+                }
+                else
+                {
+                    $('.P1P3').show();
+                }
+            }
+            else
+            {
+                if($('.P1S2').val()==0)
+                {
+                    $('.P1P4').show();
+                }
+                else if($('.P1S2').val()==1)
+                {
+                    $('.P1P5').show();
+                }
+                else
+                {
+                    $('.P1P6').show();
+                }
+            }
+        })
+
+        $('.P2PButton').on('click', function() {
+            interactP2 = 1;
+            $('.P2P1').hide();
+            $('.P2P2').hide();
+            $('.P2P3').hide();
+            $('.P2P4').hide();
+            $('.P2P5').hide();
+            $('.P2P6').hide();
+
+            if($('.P2S1').val()==0)
+            {
+                if($('.P2S2').val()==0)
+                {
+                    $('.P2P1').show();
+                }
+                else if($('.P2S2').val()==1)
+                {
+                    $('.P2P2').show();
+                }
+                else
+                {
+                    $('.P2P3').show();
+                }
+            }
+            else
+            {
+                if($('.P2S2').val()==0)
+                {
+                    $('.P2P4').show();
+                }
+                else if($('.P2S2').val()==1)
+                {
+                    $('.P2P5').show();
+                }
+                else
+                {
+                    $('.P2P6').show();
+                }
+            }
+        })
+
+        $('.P3PButton').on('click', function() {
+            interactP3 = 1;
+            $('.P3P1').hide();
+            $('.P3P2').hide();
+            $('.P3P3').hide();
+            $('.P3P4').hide();
+            $('.P3P5').hide();
+            $('.P3P6').hide();
+
+            if($('.P3S1').val()==0)
+            {
+                if($('.P3S2').val()==0)
+                {
+                    $('.P3P1').show();
+                }
+                else if($('.P3S2').val()==1)
+                {
+                    $('.P3P2').show();
+                }
+                else
+                {
+                    $('.P3P3').show();
+                }
+            }
+            else
+            {
+                if($('.P3S2').val()==0)
+                {
+                    $('.P3P4').show();
+                }
+                else if($('.P3S2').val()==1)
+                {
+                    $('.P3P5').show();
+                }
+                else
+                {
+                    $('.P3P6').show();
+                }
+            }
+        })
+
+        $('.P4PButton').on('click', function() {
+            interactP4 = 1;
+            $('.P4P1').hide();
+            $('.P4P2').hide();
+            $('.P4P3').hide();
+            $('.P4P4').hide();
+
+            if($('.P4S1').val()==0)
+            {
+                if($('.P4S2').val()==0)
+                {
+                    $('.P4P1').show();
+                }
+                else
+                {
+                    $('.P4P2').show();
+                }
+            }
+            else
+            {
+                if($('.P4S2').val()==0)
+                {
+                    $('.P4P3').show();
+                }
+                else
+                {
+                    $('.P4P4').show();
+                }
+            }
+        })
+
+
+
+        //Initiate survey:
+        $('.startButton').on('click', function(e){
+            //Prevent page from refreshing
+            e.preventDefault();
+
+            //Hide Start section
+            $('.startQuiz').hide();
+            
+            //Display the first only to start with
+            $('.IntroPart1').show();
+            
+        });
+
+        //Start Part 1:
+        $('.StartPart1Button').on('click', function() {
+            $('.IntroPart1').hide();
+            $('.Part1').show();
+            $('.Evidence1').show();
+            evidenceSeen++;
+
+            part1Seq = runSummary[userContext].seqData[0].seqCode;
+
+            console.log('Part 1 sequence:')
+            console.log(part1Seq);
+            console.log(seqToRun[userContext].slice(0,Part1Length));
+        })
+
+        //Move through Part 1:
+        $('.evFormButton').on('click',function(){
+
+            //Only act if the current question has been answered:
+            if($('.E'+evidenceSeen+'Q').is(':checked'))
+            {
+                //Keep track of where we are within Part 1:
+                currentEvidence = evidenceSeen;
+                evidenceSeen++;
+                $('.Evidence'+currentEvidence).hide();
+
+                //Record current answer:
+                currentAns = $(':checked','.E'+currentEvidence+'Q').val();
+                part1Ans.push(currentAns);
+                part1Reasons.push($('.E'+currentEvidence+'QText').val());
+                console.log(part1Ans)
+
+                if(currentEvidence == Part1Length)
+                {
+                    //If we're at the end of Part1, move on
+                    $('.EvidenceFinal').show();
+                }
+
+                else
+                {
+                    while(seqToRun[userContext][evidenceSeen-1] != 1 && evidenceSeen < Part1Length+1)
+                    {
+                        evidenceSeen++;
+                        part1Ans.push(-1);
+                        part1Reasons.push('N/A');
+                        console.log(evidenceSeen);
+
+                        if(evidenceSeen > Part1Length)
+                        {
+                            //If we're at the end of Part1, move on
+                            $('.EvidenceFinal').show();
+                        }
+                    }
+                    
+                    $('.Evidence'+evidenceSeen).show();
+
+                }
+                
+            }
+        })
+
+
+        //Finish Part 1:
+        $('.evFinalButton').on('click',function(){
+            if($('.EFinal').is(':checked'))
+            {
+                part1FinalAns = $(':checked','.EFinal').val();
+                part1FinalReason = $('.evFinalText').val(); 
+                console.log('Part 1 Rating:');
+                console.log(part1FinalAns);
+                $('.Part1').hide();
+                $('.EvidenceFinal').hide();
+                $('.IntroPart2').show();
+            }
+        })
+        
+
+        //Move to Part 2:
+        $('.StartPart2').on('click', function() {
+            $('.IntroPart2').hide();
+
+            part2Seq = seqToRun[userContext][Part1Length];
+            console.log('Part 2 Run Type:')
+            console.log(seqToRun[userContext][Part1Length]);
+
+            $('.Part2').show();
+            $('.Patient1').show();
+            if(seqToRun[userContext][Part1Length] == 'B')
+            {
+                $('.P1INT').show(); 
+            }  
+            else if(seqToRun[userContext][Part1Length] == 'C')
+            {
+                $('.P1INT').show(); 
+                $('.P1OUT').show();  
+            }
+            else if (seqToRun[userContext][Part1Length] == 'D')
+            {
+                $('.P1INT').show(); 
+                $('.P1OUT').show();
+                $('.P1SLIM').show();   
+            }   
+            else if (seqToRun[userContext][Part1Length] == 'E')
+            {
+                $('.P1INT').show(); 
+                $('.P1OUT').show();
+                $('.P1TREE').show();   
+            }   
+            else if (seqToRun[userContext][Part1Length] == 'F')
+            {
+                $('.P1INT').show(); 
+                $('.P1OUT').show();
+                $('.P1SLIM').show();  
+                $('.P1TREE').show();  
+            }   
+        })
+
+        //Move to next patient:
+        $('.patientFormButton').on('click', function(){
+
+            n = patientsSeen+1;
+            q = 'P'+n+'Q'
+
+            if($('.'+q).is(':checked'))
+            {
+                //e.preventDefault();
+                console.log($(':checked','.'+q).val());
+                //Prevent page from refreshing
+        
+                patientsSeen++;
+                part2Ans.push($(':checked','.'+q).val());
+                part2Reasons.push($('.P'+patientsSeen+'QText').val());
+
+                if(patientsSeen < TotalNumPatients)
+                {
+                    $('.patient'+patientsSeen).hide();
+                    $('.P'+patientsSeen+'INT').hide();
+                    $('.P'+patientsSeen+'OUT').hide();
+                    $('.P'+patientsSeen+'SLIM').hide();
+
+                    nextPatient = patientsSeen+1;
+                    $('.patient'+nextPatient).show();  
+
+                    if(seqToRun[userContext][Part1Length] == 'B')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                    }  
+                    else if(seqToRun[userContext][Part1Length] == 'C')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                        $('.P'+nextPatient+'OUT').show();  
+                    }
+                    else if (seqToRun[userContext][Part1Length] == 'D')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                        $('.P'+nextPatient+'OUT').show();
+                        $('.P'+nextPatient+'SLIM').show();   
+                    }    
+                    else if (seqToRun[userContext][Part1Length] == 'E')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                        $('.P'+nextPatient+'OUT').show();
+                        $('.P'+nextPatient+'TREE').show();   
+                    }    
+                    else if (seqToRun[userContext][Part1Length] == 'F')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                        $('.P'+nextPatient+'OUT').show();
+                        $('.P'+nextPatient+'SLIM').show();   
+                        $('.P'+nextPatient+'TREE').show();
+                    }    
+                }
+
+                else
+                {
+                    //Set up interaction record:
+                    interactionRecord = [interactP1, interactP2, interactP3, interactP4, SLIM1, SLIM2, SLIM3, SLIM4, TREE1, TREE2, TREE3, TREE4, outcomeP1, outcomeP2, outcomeP3, outcomeP4];
+
+                    //Get final answer
+                    part2FinalAns = $(':checked','.'+q).val();
+                    console.log('Final:');
+                    console.log(part2FinalAns);
+
+                    var dbRefProbs = firebase.database().ref('Probs');
+
+                    $('.patient'+patientsSeen).hide();
+                    $('.Part2').hide()
+                    $('.rateML').show();
+                }
+        }
+
+        });
+
+        //Reflection section (rate the system)
+        $('.ReflectButton').on('click', function(){
+            //Prevent page from refreshing
+            if($('.rateML').is(':checked'))
+            {
+                console.log('Rating')
+
+                console.log($('input[name=rateML]:checked').val());
+                console.log($('.rateMLText').val());
+
+                rating = {
+                    good: $('input[name=rateML]:checked').val(),
+                    reason: $('.rateMLText').val()
+                };
+
+                var dbRefProbs = firebase.database().ref('Probs');
+
+                //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
+                dbRefProbs.once('value', (response) => {
+                    initialSeqData = response.val().data;
+                });
+
+                $('.rateML').hide();
+                $('.commentSection').show();
+            }
+        })
+
+
+        //Grab Comments and finish things
+        $('.commentForm').on('submit', function(e){
+            //Prevent page from refreshing
+            e.preventDefault();
+
+            //Get response
+            userFeedback = $('.feedbacktext').val();
+            console.log('Feedback:');
+            console.log(userFeedback);
+
+            //Push results into Firebase DB:
+            var dbRef = firebase.database().ref('Results');
+
+
+
+            //Create result item:
+            result = {
+                context : userContext,
+                qSequence : runSummary[userContext],
+                rated : rating,
+                interactions : interactionRecord,
+                part1Answers : part1Ans,
+                part1Comments: part1Reasons,
+                part1Final : part1FinalAns,
+                part1Reason : part1FinalReason,
+                part2Answers : part2Ans,
+                part2Final: part2FinalAns,
+                part2Comments: part2Reasons,
+                feedback : userFeedback,
+            };
+
+            console.log('Results recorded:');
+            console.log(result);
+
+
+            dbRef.push(result);
+
+            //Call the other DBs
+            var dbRefProbs = firebase.database().ref('Probs');
+            var dbRefProbHist = firebase.database().ref('History');
+
+            //Update probability distributions of future sequences
+            var updatedUBC;
+            //updatedUBC = updateUBC(dataReturn, initialSeqData, runSummary, dbAccesses);
+
+            var updatedUCB;
+            updatedUCB = updateUCB(initialSeqData);
+
+            returnData = 
+            {
+                name:'X',
+                data:updatedUCB,//sequenceData,
+                accessCount:dbAccesses+1//0
+            };
+            console.log(returnData);
+
+            //Log the updates
+            dbRefProbs.set(returnData); 
+            dbRefProbHist.push(returnData);
+
+            //Hide comments section
+            $('.commentSection').hide();
+            
+            //Display the finished 1section
+            $('.finished').show();
+        });
+
+    })
+
+
+  </script>
+
+
+
+</html>
