@@ -80,6 +80,8 @@
         <h3>Data</h3>
         <p>The model was trained using the Meta-analysis Global Group in Chronic Heart Failure (MAGGIC) data-set, which compiled patient data from 30 studies including both randomized clinical trials and observational registries.</p>
         <p>The data set included <b>30,389</b> patients who have experienced a <b>heart failure</b> event. Of these, 18.8% died within 1 year of experiencing heart failure.</p>
+        <p><b>Note</b> that as a result, all risk scores reported are for patients who have <i>already</i> experienced heart failure.</p>
+        <p>Of the 30,389 patients, 66% were male. The average age was 68, with a standard deviation of 12 years.</p>
         <p>31 patient characteristics were collected, including:</p>
         <ul>
             <li><b>Basic patient details</b>: Age, gender, ethnicity</li>
@@ -87,7 +89,7 @@
             <li><b>Physical symptoms</b>: Shortness of breath (at rest and exercise), rales</li>
             <li><b>Relevant prescriptions</b>: ACE inhibitors/ARB, Beta blockers</li>
             <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
-            <li><b>New York Heart Association Score</b> (Class I-IV)</li>
+            <li><b>New York Heart Association Score</b> (Class I-IV) - <a href="http://www.heart.org/HEARTORG/Conditions/HeartFailure/AboutHeartFailure/Classes-of-Heart-Failure_UCM_306328_Article.jsp#.W0OHQtJKg2w" target="_blank">click here</a> for details</li>
         </ul>
         <hr style="border-top: dotted 1px;" />
         <div class = 'E1Q' class='evForm'>
@@ -171,7 +173,7 @@
                 <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
                 <button class = 'treeButton' style='font-size:16px'>Show Decision Trees</button>
                 <div class = 'hideTree'>
-                    <p style="text-align:center;"><img src="NNDTree.png" style="width:600px;"></p>
+                    <p style="text-align:center;"><img src="NNDTree.png" style="width:800px;"></p>
                 </div>
                 <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
                 <hr style="border-top: dotted 1px;" />
@@ -213,7 +215,7 @@
  <div class = 'IntroPart2'>
         <h2><b>Part 2</b>: Decision Support System</h2>
         <p>The following diagram explains the purpose and workings of a Decision Support System (DSS) powered by the Neural Network method described in Part 1:</p>
-        <p style="text-align:center;"><img src="DSSDiagram.png" style="width:700px;"></p>
+        <p style="text-align:center;"><img src="DSSDiagram.png" style="width:850px;"></p>
         <p>Note that the DSS is based on the Neural Network trained on data of over 30,000 patients. As new patients consult with their doctors, the clinician may refer to the Decision-Support System. The DSS will produce a predicted risk score based on the patient's characteristics, and may additionally output relevant local, high-interpretable linear or decision-tree models. The information produced may be utilized by a clinician to inform medical actions and impact patient outcomes.</p><br/>
         <p>Starting on the next screen, you will be presented with a series of patients.</p>
         <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
@@ -283,7 +285,7 @@
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
                     <p>Below is a representation of Adam's local depth-3 decision tree approximation.</p>
-                    <p style="text-align:center;"><img src="NNTREE0.png" style="width:700px;"></p>
+                    <p style="text-align:center;"><img src="NNTREE0.png" style="width:850px;"></p>
                 </div>
         </div>
 
@@ -368,7 +370,7 @@
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
                     <p>Below is a representation of Betty's local depth-3 decision tree approximation.</p>
-                    <p style="text-align:center;"><img src="NNTREE4.png" style="width:700px;"></p>
+                    <p style="text-align:center;"><img src="NNTREE4.png" style="width:850px;"></p>
                 </div>
             </div>
 
@@ -452,7 +454,7 @@
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
                     <p>Below is a representation of Clara's local depth-3 decision tree approximation.</p>
-                    <p style="text-align:center;"><img src="NNTREE3C.png" style="width:700px;"></p>
+                    <p style="text-align:center;"><img src="NNTREE3C.png" style="width:850px;"></p>
                 </div>
             </div>
 
@@ -533,7 +535,7 @@
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear decision tree models.</p>
                     <p>A different tree is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
                     <p>Below is a representation of Drew's local depth-3 decision tree approximation.</p>
-                    <p style="text-align:center;"><img src="NNTREE3D.png" style="width:700px;"></p>
+                    <p style="text-align:center;"><img src="NNTREE3D.png" style="width:850px;"></p>
                 </div>
             </div>
 
@@ -734,16 +736,16 @@
 
         //Code to reset probs when we're testing something new - comment out
 
-        returnData = 
-                    {
-                        name:'X',
-                        data:sequenceData,
-                        accessCount:0
-                    };
-                    console.log(returnData);
-        
-                    //Log the updates
-                    dbRefProbs.set(returnData); 
+        //returnData = 
+        //            {
+        //                name:'X',
+        //                data:sequenceData,
+        //                accessCount:0
+        //            };
+        //            console.log(returnData);
+        //
+        //            //Log the updates
+        //            dbRefProbs.set(returnData); 
 
         dbRefProbs.once('value', (response) => {
             
