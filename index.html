@@ -80,7 +80,7 @@
         <h3>Data</h3>
         <p>The model was trained using the Meta-analysis Global Group in Chronic Heart Failure (MAGGIC) data-set, which compiled patient data from 30 studies including both randomized clinical trials and observational registries.</p>
         <p>The data set included <b>30,389</b> patients who have experienced a <b>heart failure</b> event. Of these, 18.8% died within 1 year of experiencing heart failure.</p>
-        <p><b>Note</b> that as a result, all risk scores reported are for patients who have <i>already</i> experienced heart failure.</p>
+        <p><b>Note</b> that all risk scores reported are for patients who have <i>already</i> experienced heart failure.</p>
         <p>Of the 30,389 patients, 66% were male. The average age was 68, with a standard deviation of 12 years.</p>
         <p>31 patient characteristics were collected, including:</p>
         <ul>
@@ -111,7 +111,7 @@
             <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
             <p>The network takes in a large amount of data, in the form of patient characteristics, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
             <p>The Neural Network we utilized contained 2 hidden layers of 100 and 20 nodes respectively. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
-            <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run.</p>
+            <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run. For more information on cross-validation, <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)" target="_blank">click here</a>.</p>
             <hr style="border-top: dotted 1px;" />
             <div class = 'E2Q' class='evForm'>
                     <p>How useful do you find this information about the architecture and training methodology behind the model powering a decision-support system for heart failure patients?</p>
@@ -125,14 +125,15 @@
         </div>
 
         <div class = 'Evidence3'>
-                <h3>Model Accuracy</h3>
-                <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
-                <p>The model's AUC-ROC (receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs.<br/>This value is much higher than the best linear regression model, which achieves AUC-ROC of 0.537. It is also significantly higher than the AUC-ROC of the MAGGIC Risk Score, which is 0.6933. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>.</p>
-                <p>The model's ROC curve is below:</p>
-                <p style="text-align:center;"><img src="NNROC.png" style="width:250px;"></p>
-                <p>In addition, the model achieves an AUC-PR (precision recall curve) of <b>0.376</b>, higher than a Linear Regression model (0.250) and the MAGGIC Risk Score (0.342). For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>. </p>
-                <p>These metrics showcase the neural network model's high accuracy, especially when compared with alternative, simpler statistical models, and established risk scores.</p>
-                <hr style="border-top: dotted 1px;" />
+            <h3>Model Accuracy</h3>
+            <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
+            <p>The model's AUC-ROC (area under the receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>.</p>
+            <p>The model's ROC curve is below:</p>
+            <p style="text-align:center;"><img src="NNROC.png" style="width:350px;"></p>
+            <p>In addition, the model achieves an AUC-PR (area under the precision recall curve) of <b>0.376</b>. For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>.</p>
+            <p>The neural network's accuracy values for both AUC-ROC and AUC-PR are much higher than the best linear regression model trained on the same data. They are also significantly higher than the accuracy of the MAGGIC Risk Score, an accepted risk score trained on the same data and developed by the European Society of Cardiology and other researchers. For information on the MAGGIC Risk Score, <a href="http://www.heartfailurerisk.org/" target="_blank">click here</a>. The chart below summarizes these results:</p>
+            <p style="text-align:center;"><img src="NNAccuracy.png" style="width:450px;"></p>
+            <hr style="border-top: dotted 1px;" />
                 <div class = 'E3Q' class='evForm'>
                         <p>How useful do you find this information about the accuracy of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E3Q' class='E3Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
@@ -145,14 +146,15 @@
             </div>
 
         <div class = 'Evidence4'>
-                <h3>Model Interpretation: Stratified Linear Approximation</h3>
-                <p>Black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, including linear regression models.</p>
-                <p>To create local approximations, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
-                <p>The Root Mean-Sqaured Error between the neural network model and the linear approximation is 0.036, suggesting the 2 models are very close.</p>
-                <p>Below is a summary of the coefficients for each local linear model:</p>
-                <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
-                <p>The value of each characteristic’s coefficient represents their contribution to the variability in predicted patient risk score.</p>
-                <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
+            <h3>Model Interpretation: Stratified Linear Approximation</h3>
+            <p>As shown previously, the neural-network outperforms simple linear models. However, the network is a <b>black-box</b>, which means it is impossible to tell how patient characteristics contribute to the outputted risk scores it produces.</p>
+            <p>In order to better understand how the model produces a prediction, black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, including linear regression models.</p>
+            <p>To create local approximations, after the neural network generated its risk scores, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+            <p>The Root Mean-Squared Error between the neural network model and the linear approximation is 0.036, suggesting the 2 models are very close.</p>
+            <p>Below is a summary of the coefficients for each local linear model:</p>
+            <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
+            <p>Since the linear approximation and the neural network models are so close, the value of each characteristic’s coefficient closely approximates their contribution to the variability in predicted patient risk score.</p>
+            <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
                 <hr style="border-top: dotted 1px;" />
                 <div class = 'E4Q' class='evForm'>
                         <p>How useful do you find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
@@ -166,17 +168,19 @@
         </div>
 
         <div class = 'Evidence5'>
-                <h3>Model Interpretation: Decision Tree</h3>
-                <p>Black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
-                <p>To create local approximations, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
-                <p>The Root Mean-Sqaured Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
-                <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
-                <button class = 'treeButton' style='font-size:16px'>Show Decision Trees</button>
-                <div class = 'hideTree'>
-                    <p style="text-align:center;"><img src="NNDTree.png" style="width:800px;"></p>
-                </div>
-                <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
-                <hr style="border-top: dotted 1px;" />
+            <h3>Model Interpretation: Decision Tree</h3>
+            <p>As shown previously, the neural-network outperforms simple linear models. However, the network is a <b>black-box</b>, which means it is impossible to tell how patient characteristics contribute to the outputted risk scores it produces.</p>
+            <p>In order to better understand how the model produces a prediction, black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
+            <p>To create local approximations, after the neural network generated its risk scores, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
+            <p>The Root Mean-Squared Error between the neural network model and the decision tree approximation is 0.046, suggesting the 2 models are very close.</p>
+            <p>Click below for a summary of the depth-3 trees for each local linear model:</p>
+            <button class = 'treeButton' style='font-size:16px'>Show Decision Trees</button>
+            <div class = 'hideTree'>
+                <p style="text-align:center;"><img src="NNDTree.png" style="width:800px;"></p>
+            </div>
+            <p>Note that each risk stratum utilizes different patient characteristics  for classification. Few patients are classified in the 80-100% class.</p>
+            <p>Since the models are so close, we can view the trees as an approximation explaining how each patient is assigned a risk score based on their characteristics and symptoms.</p>
+            <hr style="border-top: dotted 1px;" />
                 <div class = 'E5Q' class='evForm'>
                         <p>How useful do you find this decision-tree approximation of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E5Q' class='E5Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
@@ -245,6 +249,7 @@
             <button class = 'P1Button' style='font-size:16px'>Interact with Decision Support System</button>
             <div class = 'Patient1DSS' class = 'P1'>
                 <p>Examine how the following factors might impact Adam's predicted risk score, based on the Neural Network model utilized:</p>
+                <p><b>Note</b>: This is a demo only. A full Decision-Support System will include other patient characteristics. 2 randomly chosen characteristics that impact the risk score were included here.<br/>This interactive tool is <b>not</b> meant to propose medical actions. Its goal is to enable exploring of how different patient characteristics may impact their risk score.</p>
                 <select class = 'P1S1'>
                         <option value='0'>Smoker</option>
                         <option value='1'>Non-smoker</option>
@@ -330,6 +335,7 @@
                 <button class = 'P2Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient2DSS' class = 'P2'>
                     <p>Examine how the following factors might impact Betty's predicted risk score, based on the Neural Network model utilized:</p>
+                    <p><b>Note</b>: This is a demo only. A full Decision-Support System will include other patient characteristics. 2 randomly chosen characteristics that impact the risk score were included here.<br/>This interactive tool is <b>not</b> meant to propose medical actions. Its goal is to enable exploring of how different patient characteristics may impact their risk score.</p>
                     <select class = 'P2S1'>
                             <option value='0'>New York Association Score Class IV</option>
                             <option value='1'>New York Association Score Class III</option>
@@ -414,6 +420,7 @@
                 <button class = 'P3Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient3DSS' class = 'P3'>
                     <p>Examine how the following factors might impact Clara's predicted risk score, based on the Neural Network model utilized:</p>
+                    <p><b>Note</b>: This is a demo only. A full Decision-Support System will include other patient characteristics. 2 randomly chosen characteristics that impact the risk score were included here.<br/>This interactive tool is <b>not</b> meant to propose medical actions. Its goal is to enable exploring of how different patient characteristics may impact their risk score.</p>
                     <select class = 'P3S1'>
                         <option value='0'>Smoker</option>
                         <option value='1'>Non-smoker</option>
@@ -498,6 +505,7 @@
                 <button class = 'P4Button' style='font-size:16px'>Interact with Decision Support System</button>
                 <div class = 'Patient4DSS' class = 'P4'>
                     <p>Examine how the following factors might impact Drew's predicted risk score, based on the Neural Network model utilized:</p>
+                    <p><b>Note</b>: This is a demo only. A full Decision-Support System will include other patient characteristics. 2 randomly chosen characteristics that impact the risk score were included here.<br/>This interactive tool is <b>not</b> meant to propose medical actions. Its goal is to enable exploring of how different patient characteristics may impact their risk score.</p>
                     <select class = 'P4S1'>
                         <option value='0'>Diabetes - unmanaged</option>
                         <option value='1'>Diabetes - managed</option>
@@ -920,7 +928,7 @@
     part2Reasons = [];
     var part1FinalAns;
     var part1FinalReason;
-    var part2FinalAns;
+    part2FinalAns = 0;
     seqToRun = [];
     runSummary = [];
     Part1Length = 5;
@@ -1423,6 +1431,7 @@
         
                 patientsSeen++;
                 part2Ans.push($(':checked','.'+q).val());
+                part2FinalAns = part2FinalAns + parseInt($(':checked','.'+q).val());
                 part2Reasons.push($('.P'+patientsSeen+'QText').val());
 
                 if(patientsSeen < TotalNumPatients)
@@ -1471,7 +1480,7 @@
                     interactionRecord = [interactP1, interactP2, interactP3, interactP4, SLIM1, SLIM2, SLIM3, SLIM4, TREE1, TREE2, TREE3, TREE4, outcomeP1, outcomeP2, outcomeP3, outcomeP4];
 
                     //Get final answer
-                    part2FinalAns = $(':checked','.'+q).val();
+                    part2FinalAns = part2FinalAns/TotalNumPatients;
                     console.log('Final:');
                     console.log(part2FinalAns);
 
