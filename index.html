@@ -15,7 +15,7 @@
   <h3>Details</h3>
   <p>
     Thank you for your interest in our study.</br>
-    The purpose of the study is to investigate the factors that generate value for the use of Machine Learning models in generating prognostic predictions as part of decision-support systems designed to augment and complement the work of medical professionals and diagnosticians.<br/>
+    The purpose of the study is to investigate the factors that drive value for the use of Machine Learning models in generating prognostic predictions as part of decision-support systems designed to augment and complement the work of medical professionals and diagnosticians.<br/>
     In particular, we are looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and Decision-Support system design choices affect the confidence of medical experts in such systems.<br/>
     The study proceeds in two stages:
     <ol>
@@ -154,8 +154,8 @@
             <p>Below is a summary of the coefficients for each local linear model:</p>
             <p style="text-align:center;"><img src="NNSLIM.png" style="width:600px;"></p>
             <p>Since the linear approximation and the neural network models are so close, the value of each characteristic’s coefficient closely approximates their contribution to the variability in predicted patient risk score.</p>
-            <p>For instance, the negative coefficient for Beta blocker prescriptions suggests this treatment is appropriate, as it lowers risk of death. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
-                <hr style="border-top: dotted 1px;" />
+            <p>For instance, the negative coefficient for Beta blocker prescriptions suggests a negative correlation between this variable and risk of death, though the magnitude differs among risk strata. Some factors, such as shortness of breath at rest or gender, are only significant for high risk groups.</p>
+            <hr style="border-top: dotted 1px;" />
                 <div class = 'E4Q' class='evForm'>
                         <p>How useful do you find this local linear approximation of the model powering a decision-support system for heart failure patients?</p>
                         <input type='radio' name='E4Q' class='E4Q' class='evForm' value=0> 1: <b>Not useful</b> - I do not understand or care about this information, and it does not impact my opinion of the model or decision-support system<br>
@@ -237,7 +237,7 @@
             <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
             <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
             <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
-            The patient has marked limitation of physical activity (New York Heart Association Score Class III).</p>
+            Adam has marked limitation of physical activity (New York Heart Association Score Class III).</p>
             <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
             His sodium level is 145, and creatine is 64.</p>-->
             <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
@@ -277,7 +277,7 @@
                 <div class = 'P1SLIMH'>
                     <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                     <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                    <p>Below are the coefficients for all significant characteristics of Adam's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                    <p>Below are the coefficients for all significant characteristics of Adam's local linear approximation model. Note that the magnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
                     <p style="text-align:center;"><img src="NNSLIM0.png" style="width:200px;"></p>
                 </div>
         </div>
@@ -323,7 +323,7 @@
             <p style="text-align:center;"><img src="Betty.png" style="width:75px;"></p>
             <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
             <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
-            The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            Betty is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
             Her sodium level is 138, and creatine is 132.6.</p>-->
             <p>Betty has not been prescribed either ACE inhibitors or Beta blockers.</p>
@@ -363,7 +363,7 @@
                     <div class = 'P2SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                        <p>Below are the coefficients for all significant characteristics of Betty's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p>Below are the coefficients for all significant characteristics of Betty's local linear approximation model. Note that the magnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
                         <p style="text-align:center;"><img src="NNSLIM4.png" style="width:200px;"></p>
                     </div>
             </div>
@@ -408,7 +408,7 @@
             <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
             <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
             <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
-                The patient has some limitation of physical activity (New York Heart Association Score Class II).</p>
+                Clara has some limitation of physical activity (New York Heart Association Score Class II).</p>
             <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
             Her sodium level is 138, and creatine is 107.</p>-->
             <p>Clara has been prescribed ACE inhibitors.</p>
@@ -448,7 +448,7 @@
                     <div class = 'P3SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                        <p>Below are the coefficients for all significant characteristics of Clara's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p>Below are the coefficients for all significant characteristics of Clara's local linear approximation model. Note that the magnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
                         <p style="text-align:center;"><img src="NNSLIM3.png" style="width:200px;"></p>
                     </div>
             </div>
@@ -493,7 +493,7 @@
             <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
             <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
             <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
-                The patient is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+                Drew is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
             His sodium level is 131, and creatine is 135.</p>-->
             <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
@@ -530,7 +530,7 @@
                     <div class = 'P4SLIMH'>
                         <p>Machine Learning models, including the neural network powering this Decision-Support System, can be approximated locally using simpler, highly interpretable linear regression models.</p>
                         <p>A different model is trained for each risk quintile, 0-20%, 20-40%, etc.</p>
-                        <p>Below are the coefficients for all significant characteristics of Drew's local linear approximation model. Note that the madnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
+                        <p>Below are the coefficients for all significant characteristics of Drew's local linear approximation model. Note that the magnitude of the coefficients signifies how much the patient characteristic contributes to the risk score.</p>
                         <p style="text-align:center;"><img src="NNSLIM3.png" style="width:200px;"></p>
                     </div>
             </div>
