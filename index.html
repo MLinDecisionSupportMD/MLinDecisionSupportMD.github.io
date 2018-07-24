@@ -16,8 +16,8 @@
   <p>
     Thank you for your interest in our study.</br>
     A primary role of doctors and clinicians is to assess the medical risk of patients exhibiting various symptoms and characteristics, and prescribe appropriate treatments and medical actions.<br/> 
-    The purpose of the study is to investigate the factors that drive value for the use of Machine Learning models in generating prognostic predictions as part of decision-support systems for risk assessment designed to augment and complement the work of medical professionals and diagnosticians.<br/>
-    Many risk scores are currently embedded in electronic patient records; however these are not based on Machine Learning methods, which can provide increased accuracy and other benefits, but may have perceived limitations in areas such as interpretability.<br/>
+    The purpose of the study is to investigate the factors that drive value for the use of <b>Machine Learning models</b> in generating prognostic predictions as part of <b>decision-support systems for risk assessment</b> designed to augment and complement the work of medical professionals and diagnosticians.<br/>
+    Many risk scores are currently embedded in electronic patient records; however these are based on logic rules and simpler statistical methods rather than Machine Learning algorithms, which can provide increased accuracy and other benefits, but may have perceived limitations in areas such as interpretability.<br/>
     We are specifically looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and Decision-Support system design choices affect the confidence of medical experts in such systems.<br/>
     The study proceeds in two stages:
     <ol>
@@ -30,7 +30,7 @@
     <button class = 'showStudyInfo'>Full Study Info</button>
   <div class='studyInfo' style='font-size:75%;'>
     <h5>General Information</h5>
-        <p>Machine Learning and Artificial Intelligence models are gaining enthusiasm for their ability to produce highly accurate predictive and analytical insights. However, as many such models, including neural networks, are <i>black-boxes</i>, many fields of practice are reluctant to utilize these models without an ability to interpret their results or understand how a model generates its prediction.</p>
+        <p>Machine Learning, and more generally Artificial Intelligence, models are gaining enthusiasm for their ability to produce highly accurate predictive and analytical insights. However, as many such models, including neural networks, are <i>black-boxes</i>, many fields of practice are reluctant to utilize these models without an ability to interpret their results or understand how a model generates its prediction.</p>
         <p>As a result, although ML models appear like natural and powerful choices for powering systems that support and augment decision-making processes for medical clinicians, there has so far not been a heavy push to incorporate these into practice in the medical field.</p>
         <p>The aim of this study is to explore this phenomenon and understand what type of model evidence and interpretability modules will increase comprehension and the confidence levels for users in different machine learning predictive models utilized in decision-support systems for prognostics.</p>
         <p>We appreciate your interest in participating in this online survey. You have been invited to participate as an expert in medicine, computer science, or related. Please read through these terms before beginning the survey. You will participate by ticking the <i>Start</i> box below. You may ask any questions before taking part by contacting the researcher (details below).</p>
@@ -84,7 +84,7 @@
         <p>The data set included <b>30,389</b> patients who have experienced a <b>heart failure</b> event. Of these, 18.8% died within 1 year of experiencing heart failure.</p>
         <p><b>Note</b> that all risk scores reported are for patients who have <i>already</i> experienced heart failure.</p>
         <p>Of the 30,389 patients, 66% were male. The average age was 68, with a standard deviation of 12 years.</p>
-        <p>31 patient characteristics were collected, including:</p>
+        <p>31 patient characteristics, symptoms, and other features were collected, including:</p>
         <ul>
             <li><b>Basic patient details</b>: Age, gender, ethnicity</li>
             <li><b>Patient habits</b>: BMI, Smoking, Diabetes condition</li>
@@ -93,6 +93,8 @@
             <li><b>Data and test results</b>: Systolic and diastolic blood pressure, ejection fraction, etc.</li>
             <li><b>New York Heart Association Score</b> (Class I-IV) - <a href="http://www.heart.org/HEARTORG/Conditions/HeartFailure/AboutHeartFailure/Classes-of-Heart-Failure_UCM_306328_Article.jsp#.W0OHQtJKg2w" target="_blank">click here</a> for details</li>
         </ul>
+        <p>Missing values were imputed using standard methods (Multiple Imputation by Chained Equations), which provide accurate estimates for missing or not-recorded patient symptoms and characteristics</p>
+        <p>More details about the MAGGIC data-set, including a full list of features, can be found in <a href="https://academic.oup.com/eurheartj/article/34/19/1404/422939" target="_blank">(Pocock et al., 2012)</a>.</p>
         <hr style="border-top: dotted 1px;" />
         <div class = 'E1Q' class='evForm'>
                 <p>How useful do you find this information about the data used to train the model powering a decision-support system for heart failure patients?</p>
@@ -108,11 +110,11 @@
     <div class = 'Evidence2'>
             <h3>Model Training and Implementation</h3>
             <p>The model utilized was a Neural Network, a sophisticated deep learning algorithm that has seen increased attention in recent years, as multiple studies have shown it to vastly outperform simpler linear models and other methods that have been traditionally utilized to generate risk scores in medicine.</p>
-            <p>A neural network is a Machine Learning algorithm inspired by the human brain, utilizing connected nodes organized in hidden layers. The network uses optimization techniques and non-linear activation functions to automatically discover complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>A <b>neural network</b> is a Machine Learning algorithm inspired by the human brain, utilizing <b>connected nodes</b> organized in <b>hidden layers</b>. With a single node and layer, the network would be essentially equivalent to a the linear predictive model known as Logistic Regression. However, adding nodes and layers enables the network to learn more complex, non-linear patterns in the data.<br/>The network uses optimization techniques and non-linear activation functions to automatically discover these complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
             <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
             <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
-            <p>The network takes in a large amount of data, in the form of patient characteristics, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
-            <p>The Neural Network we utilized contained 2 hidden layers of 100 and 20 nodes respectively. Such a network architecture is sufficiently large to capture sophisticated non-linear data patterns, but not too large, thus avoiding overfitting.</p>
+            <p>The network takes in a large amount of data, in the form of patient characteristics or features, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
+            <p>The Neural Network we utilized contained 2 hidden layers of 100 and 20 nodes respectively. In general, network architecture, including the number of nodes and layers, must be tweaked and tuned to ensure the network is large enough to capture complex data patterns, but not too large compared to the size of the data-set, which would result in over-fitting and poor predictive performance in practice. The architecture we have selected of 2 layers with 100 and 20 nodes, respectively, was tuned and found to achieve highly accurate results.</p>
             <p>The model was trained using 10-fold cross validation, using 90% of the data for training and the rest for testing. This was repeated 10 times, and we report average figures over the run. For more information on cross-validation, <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)" target="_blank">click here</a>.</p>
             <hr style="border-top: dotted 1px;" />
             <div class = 'E2Q' class='evForm'>
@@ -129,7 +131,7 @@
         <div class = 'Evidence3'>
             <h3>Model Accuracy</h3>
             <p>The neural network showcases <b>81.26%</b> accuracy, which means that 81% of the test cases were classified correctly by the model.</p>
-            <p>The model's AUC-ROC (area under the receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>.</p>
+            <p>The model's AUC-ROC (area under the receiver operating curve), which is equal to the C-Index, is <b>0.725</b>, with a standard deviation of 0.0054, averaged over 10 runs. This suggests high accuracy for the type of data, as we demonstrate below by comparing our network to a simple linear model and a risk score currently in use. For more information on the C-Statistic or AUC-ROC, <a href="http://www.statisticshowto.com/c-statistic/" target="_blank">click here</a>.</p>
             <p>The model's ROC curve is below:</p>
             <p style="text-align:center;"><img src="NNROC.png" style="width:350px;"></p>
             <p>In addition, the model achieves an AUC-PR (area under the precision recall curve) of <b>0.376</b>. For more information about precision and recall, <a href="https://en.wikipedia.org/wiki/Precision_and_recall" target="_blank">click here</a>.</p>
@@ -149,6 +151,8 @@
 
         <div class = 'Evidence4'>
             <h3>Model Interpretation: Stratified Linear Approximation</h3>
+            <p>We have trained a neural network to predict the <b>risk</b>, or probability that a given patient who has suffered heart failure will die within one year of the heart failure event.</p>
+            <p>The model was trained on the data-set discussed previously, containing over 30K patients and 31 patient characteristics and features ranging from age to their New York Heart Association Score.</p>
             <p>As shown previously, the neural-network outperforms simple linear models. However, the network is a <b>black-box</b>, which means it is impossible to tell how patient characteristics contribute to the outputted risk scores it produces.</p>
             <p>In order to better understand how the model produces a prediction, black-box models, like neural networks, can be <b>approximated locally</b> using simpler models, including linear regression models.</p>
             <p>To create local approximations, after the neural network generated its risk scores, a different linear model was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
@@ -171,6 +175,8 @@
 
         <div class = 'Evidence5'>
             <h3>Model Interpretation: Decision Tree</h3>
+            <p>We have trained a neural network to predict the <b>risk</b>, or probability that a given patient who has suffered heart failure will die within one year of the heart failure event.</p>
+            <p>The model was trained on the data-set discussed previously, containing over 30K patients and 31 patient characteristics and features ranging from age to their New York Heart Association Score.</p>
             <p>As shown previously, the neural-network outperforms simple linear models. However, the network is a <b>black-box</b>, which means it is impossible to tell how patient characteristics contribute to the outputted risk scores it produces.</p>
             <p>In order to better understand how the model produces a prediction, black-box models, like neural networks, can be <b>approximated</b> using simpler models, such as decision trees.</p>
             <p>To create local approximations, after the neural network generated its risk scores, a different decision tree was trained for each quintile of risk: 0-20%, 20-40%, etc.</p>
