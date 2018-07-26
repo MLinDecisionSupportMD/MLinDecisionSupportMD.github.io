@@ -39,8 +39,8 @@
     <h5>Do I have to take part?</h5>
         <p>Please note that your participation is voluntary. You may withdraw at any point during the questionnaire for any reason, before submitting your answers, by closing the browser. None of your answers will then be collected.</p>
     <h5>How will your data be used?</h5>
-        <p>Your answers will be completely anonymous, and we will use all reasonable endeavours to keep them confidential. No personally identifiable, including but not limited to IP address, email address, or name, will be requested or collected.</p>
-        <p>Your answers will be stored in a password-protected file and may be used in academic publications. Your IP address will not be stored. Research data will be stored for a minimum of three years after publication or public release.</p>
+    <p>Your answers will be completely anonymous, and we will use all reasonable endeavours to keep them confidential. No personally identifiable information, including but not limited to IP address, email address, or name, will be requested or collected.</p>
+    <p>Your answers will be stored in a password-protected file and may be used in academic publications. Your IP address will not be stored. Research data will be stored for a minimum of three years after publication or public release.</p>
     <h5>Who will have access to your data?</h5>
         <p>The University of Oxford is the data controller for the purposes of the Data Protection Act 1998.</p>
         <p>We would like your permission to use your unidentifiable data in future studies, and to share data with other researchers (e.g. in online databases).</p>
@@ -110,7 +110,7 @@
     <div class = 'Evidence2'>
             <h3>Model Training and Implementation</h3>
             <p>The model utilized was a Neural Network, a sophisticated deep learning algorithm that has seen increased attention in recent years, as multiple studies have shown it to vastly outperform simpler linear models and other methods that have been traditionally utilized to generate risk scores in medicine.</p>
-            <p>A <b>neural network</b> is a Machine Learning algorithm inspired by the human brain, utilizing <b>connected nodes</b> organized in <b>hidden layers</b>. With a single node and layer, the network would be essentially equivalent to a the linear predictive model known as Logistic Regression. However, adding nodes and layers enables the network to learn more complex, non-linear patterns in the data.<br/>The network uses optimization techniques and non-linear activation functions to automatically discover these complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>A <b>neural network</b> is a Machine Learning algorithm inspired by the human brain, utilizing <b>connected nodes</b> organized in <b>hidden layers</b>. With a single node and layer, the network would be essentially equivalent to a the linear predictive model known as Logistic Regression. However, adding nodes and layers enables the network to learn more complex, non-linear patterns in the data.</p><p>The network uses optimization techniques and non-linear activation functions to automatically discover these complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
             <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
             <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
             <p>The network takes in a large amount of data, in the form of patient characteristics or features, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
@@ -226,7 +226,7 @@
 
  <div class = 'IntroPart2'>
     <h2><b>Part 2</b>: Decision Support System Providing Risk Assessment</h2>
-        <p>We next focus on a <b>Decision Support System providing Risk Assessment</b>. Such a system is designed to support the decision-making processes of doctors facing patients exhibiting certain characteristics, symptoms, and conditions.<br/>The system supports decisions on relevant medical actions by providing a <b>predicted risk score</b>, as well as background and explanations of the score.<br/>The system does <b>not</b> make treatment recommendations. However, the information provided may assist treatment decisions by explaining how different patient risk factors may contribute to predicted outcomes.</p><br/>
+        <p>We next focus on a <b>Decision Support System providing Risk Assessment</b>. Such a system is designed to support the decision-making processes of doctors facing patients exhibiting certain characteristics, symptoms, and conditions.<p/><p>The system supports decisions on relevant medical actions by providing a <b>predicted risk score</b>, as well as background and explanations of the score.<br/>The system does <b>not</b> make treatment recommendations. However, the information provided may assist treatment decisions by explaining how different patient risk factors may contribute to predicted outcomes.</p>
         <p>The following diagram explains the purpose and workings of a Decision Support System (DSS) powered by the Neural Network method described in Part 1:</p>
         <p style="text-align:center;"><img src="DSSDiagram.png" style="width:850px;"></p>
         <p>Note that the DSS is based on the Neural Network trained on data of over 30,000 patients. As new patients consult with their doctors, the clinician may refer to the Decision-Support System. The DSS will produce a predicted risk score based on the patient's characteristics, and may additionally output relevant local, high-interpretable linear or decision-tree models. The information produced may be utilized by a clinician to inform medical actions and impact patient outcomes.</p><br/>
@@ -245,9 +245,9 @@
             <p>The following represents a patient scenario. A Decision Support System outputs a risk score based on the patient's characteristics. A doctor may choose to use the information below, including the risk score, to inform their medical decisions.</p><br/>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Adam.png" style="width:50px;"></p>
-            <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
-            <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.<br>
-            Adam has marked limitation of physical activity (New York Heart Association Score Class III).</p>
+            <p>Patient <b>Adam</b>, a 43-year-old Caucasian male, experienced heart failure.</p><p>Our model predicts that the probability of Adam dying in the one year following the event is <b>15.9%</b>.</p>
+            <p>Adam has a BMI of 26.5, and exhibits rales and shortness of breath at exercise.</p>
+            <p>Adam has marked limitation of physical activity (New York Heart Association Score Class III).</p>
             <!--<p>Adam showcases an ejection fraction of 19%, his systolic blood pressure is 113, and his diastolic blood pressure is 78.<br>
             His sodium level is 145, and creatine is 64.</p>-->
             <p>Adam has not been prescribed either ACE inhibitors or Beta blockers.</p>
@@ -332,9 +332,9 @@
             <p>The following represents a patient scenario. A Decision Support System outputs a risk score based on the patient's characteristics. A doctor may choose to use the information below, including the risk score, to inform their medical decisions.</p><br/>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Betty.png" style="width:75px;"></p>
-            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
-            <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.<br>
-            Betty is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <p>Patient <b>Betty</b>, 86-year-old non-Caucasian female, experienced heart failure.</p><p>Our model predicts that the probability of Betty dying in the one year following the event is <b>83.5%</b>.</p>
+            <p>Betty has a BMI of 21.6, and exhibits rales and shortness of breath at rest.</p>
+            <p>Betty is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Betty showcases an ejection fraction of 36%, her systolic blood pressure is 110, and her diastolic blood pressure is 70.<br>
             Her sodium level is 138, and creatine is 132.6.</p>-->
             <p>Betty has not been prescribed either ACE inhibitors or Beta blockers.</p>
@@ -418,9 +418,9 @@
             <p>The following represents a patient scenario. A Decision Support System outputs a risk score based on the patient's characteristics. A doctor may choose to use the information below, including the risk score, to inform their medical decisions.</p><br/>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Clara.png" style="width:50px;"></p>
-            <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.<br>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
-            <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.<br>
-                Clara has some limitation of physical activity (New York Heart Association Score Class II).</p>
+            <p>Patient <b>Clara</b>, 54-year-old Caucasian female, experienced heart failure.</p><p>Our model predicts that the probability of Clara dying in the one year following the event is <b>60.5%</b>.</p>
+            <p>Clara has a BMI of 33.4, and exhibits rales and shortness of breath at rest.</p>
+            <p>Clara has some limitation of physical activity (New York Heart Association Score Class II).</p>
             <!--<p>Clara showcases an ejection fraction of 42%, her systolic blood pressure is 130, and her diastolic blood pressure is 70.<br>
             Her sodium level is 138, and creatine is 107.</p>-->
             <p>Clara has been prescribed ACE inhibitors.</p>
@@ -504,9 +504,9 @@
             <p>The following represents a patient scenario. A Decision Support System outputs a risk score based on the patient's characteristics. A doctor may choose to use the information below, including the risk score, to inform their medical decisions.</p><br/>
             <p>Please examine the following patient:</p>
             <p style="text-align:center;"><img src="Drew.png" style="width:50px;"></p>
-            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.<br>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
-            <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.<br>
-                Drew is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
+            <p>Patient <b>Drew</b>, a 70-year-old non-Caucasian male, experienced heart failure.</p><p>Our model predicts that the probability of Drew dying in the one year following the event is <b>72.0%</b>.</p>
+            <p>Drew has a BMI of 24.2, and exhibits rales and shortness of breath at rest.</p>
+            <p>Drew is unable to perform physical activity without discomfort (New York Heart Association Score Class IV).</p>
             <!--<p>Drew showcases an ejection fraction of 33%, her systolic blood pressure is 110, and his diastolic blood pressure is 60.<br>
             His sodium level is 131, and creatine is 135.</p>-->
             <p>Drew has been Not been prescribed ACE inhibitors or Beta blockers.</p>
