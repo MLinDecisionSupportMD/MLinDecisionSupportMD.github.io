@@ -882,7 +882,7 @@
                                 
                                 upTries = curSeq.numTries + 1;
                                 upMean = ((curSeq.currentMean*curSeq.numTries) + newAns)/upTries;
-                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
+                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/upTries)),10);
 
                                 //Check for NaN:
                                 if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
@@ -891,7 +891,7 @@
                             {
                                 upTries = curSeq.numTries;
                                 upMean = curSeq.currentMean;
-                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/Math.log(upTries))),10);
+                                upUCB = upMean + Math.min(Math.sqrt(2*(Math.log(upAccesses)/upTries)),10);
 
                                 //Check for NaN:
                                 if (isNaN(upUCB) || upTries<=1) {upUCB=10;}
