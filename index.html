@@ -60,7 +60,7 @@
 
  <div class = 'startQuiz'>
      <h3>Start</h3>
-     <p>This version of the survey is designed for <b>Medical Students</b>.</p>
+     <p>This version of the survey is designed for <b>Medical students</b>.</p>
      <p>If you are ready to begin, please press start:</p>
      <button class = 'StartButton'>Start</button>
   </div>
@@ -603,8 +603,30 @@
     
 </div>
 
+<div class = 'participantDetails'>
+    <h2>Part 4: About You</h2>
+    <p>While this survey is anonymous, we do ask for some optional, high-level details about your personal medical background and prior experience with machine learning that will allow us to analyze data at a deeper level.</p>
+    <hr style="border-top: dotted 1px;" />
+        <div class = 'expForm'>
+            <p>A. Please specify your area of medical expertise (ex. cardiology, internal medicine, generalist, etc.)</p>
+            <textarea comments cols=50 rows=1 placeholder='Unspecified' class = 'expText' name='expText'></textarea><br/>
+            <p>B. Please rate your past experience with machine learning, prior to taking this survey:</p>
+                    <input type='radio' name='exp1' class='exp1' value=0> 1: I knew very little about machine learning and its applicability to medicine<br>
+                    <input type='radio' name='exp1' class='exp1' value=1> 2: I have had a basic understanding of machine learning and have heard the term 'neural network' before<br>
+                    <input type='radio' name='exp1' class='exp1' value=2> 3: I have had a good idea of what machine learning is and how it can contribute to the medical field<br>
+                    <input type='radio' name='exp1' class='exp1' value=3> 4: I am a practitioner of machine learning and have utilized it in research or practice in the past<br>
+            <p>C. What is your experience with decision-support systems prior to this survey?</p>
+                    <input type='radio' name='exp2' class='exp2' value=0> 1: I have not heard of them or have never had a chance to interact with them in the past<br>
+                    <input type='radio' name='exp2' class='exp2' value=1> 2: I have had a negative experience intreacting with decision-support systems in the past, or feel that I would not readily trust them<br>
+                    <input type='radio' name='exp2' class='exp2' value=2> 3: I have had a positive experience interacting with decision-support systems in the past, and see high value in such systems<br>
+                    <input type='radio' name='exp2' class='exp2' value=3> 4: I have some experience with decision-support systems in the past; I would not classify this as negative or positive<br>
+            <p></p>
+            <button class = 'expFormButton'>Next</button>
+        </div>
+ </div>
+
  <div class = 'commentSection'>
-    <h2>Part 4: Comments</h2>
+    <h2>Part 5: Comments</h2>
     <p>Please leave any feedback, comments, or concerns about the survey you have just completed.</p>
     <p>In particular, you may address the following:
         <ul>
@@ -940,6 +962,7 @@
     part1Reasons = [];
     part2Ans = [];
     part2Reasons = [];
+    profile = [];
     var part1FinalAns;
     var part1FinalReason;
     part2FinalAns = 0;
@@ -989,6 +1012,7 @@
         $('.whyLow').hide();
         $('.whyHigh').hide();
         $('.rateML').hide();
+        $('.participantDetails').hide();
         $('.IntroPart1').hide();
         $('.Part1').hide();
         $('.Evidence1').hide();
@@ -1523,6 +1547,22 @@
                     reason: $('.rateMLText').val()
                 };
 
+                $('.rateML').hide();
+                $('.participantDetails').show();
+
+            }
+
+        })
+
+        //Reflection section (rate the system)
+        $('.expFormButton').on('click', function(){
+
+                profile.push($('.expText').val());
+                profile.push($('input[name=exp1]:checked').val());
+                profile.push($('input[name=exp2]:checked').val());
+
+                console.log(profile);
+
                 var dbRefProbs = firebase.database().ref('Probs');
 
                 //Redownload Data (so it's fresh, we'll use this newer copy to update UBCs)
@@ -1530,9 +1570,9 @@
                     initialSeqData = response.val().data;
                 });
 
-                $('.rateML').hide();
+                $('.participantDetails').hide();
                 $('.commentSection').show();
-            }
+            
         })
 
 
@@ -1554,6 +1594,7 @@
             //Create result item:
             result = {
                 context : userContext,
+                userProfile: profile,
                 qSequence : runSummary[userContext],
                 rated : rating,
                 interactions : interactionRecord,
@@ -1564,8 +1605,7 @@
                 part2Answers : part2Ans,
                 part2Final: part2FinalAns,
                 part2Comments: part2Reasons,
-                feedback : userFeedback,
-            };
+                feedback : userFeedback            };
 
             console.log('Results recorded:');
             console.log(result);
