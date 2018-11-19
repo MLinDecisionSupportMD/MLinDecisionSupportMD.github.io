@@ -17,7 +17,7 @@
     Thank you for your interest in our study.</br>
     A primary role of doctors and clinicians is to assess the medical risk of patients exhibiting various symptoms and characteristics, and prescribe appropriate treatments and medical actions.<br/> 
     The purpose of the study is to investigate the factors that drive value for the use of <b>Machine Learning models</b> in generating prognostic predictions as part of <b>decision-support systems for risk assessment</b> designed to augment and complement the work of medical professionals and diagnosticians.<br/>
-    Many risk scores are currently embedded in electronic electronic health records; however these are based on logic rules and simpler statistical methods rather than Machine Learning algorithms, which can provide increased accuracy and other benefits, but may have perceived limitations in areas such as interpretability.<br/>
+    Many risk scores are currently embedded in electronic health records; however these are based on logic rules and simpler statistical methods rather than Machine Learning algorithms, which can provide increased accuracy and other benefits, but may have perceived limitations in areas such as interpretability.<br/>
     We are specifically looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and decision-support system design choices affect the confidence of medical experts in such systems.<br/>
     The study proceeds in two stages:
     <ol>
@@ -28,25 +28,26 @@
     In this study, we focus on patients who have experienced heart failure, and predict the probability, or risk, of death one year after their heart failure event.<br/><br/>
     Please click below for full details before you start the survey.</p>
     <button class = 'showStudyInfo'>Full Study Info</button>
-  <div class='studyInfo' style='font-size:75%;'>
-    <h5>General Information</h5>
+  <div class='studyInfo'>
+    <h3>General Information</h3>
         <p>Machine Learning, and more generally Artificial Intelligence, models are gaining enthusiasm for their ability to produce highly accurate predictive and analytical insights. However, as many such models, including neural networks, are <i>black-boxes</i>, many fields of practice are reluctant to utilise these models without an ability to interpret their results or understand how a model generates its prediction.</p>
         <p>As a result, although ML models appear like natural and powerful choices for powering systems that support and augment decision-making processes for medical clinicians, there has so far not been a heavy push to incorporate these into practice in the medical field.</p>
-        <p>The aim of this study is to explore this phenomenon and understand what type of model evidence and interpretability modules will increase comprehension and the confidence levels for users in different machine learning predictive models utilised in decision-support systems for prognostics.</p>
+        <p>The aim of this study is to explore this phenomenon and understand what type of model evidence and interpretability modules will increase users' trust in different machine learning models utilised in decision-support systems.</p>
         <p>We appreciate your interest in participating in this online survey. You have been invited to participate as an expert in medicine, computer science, or related. Please read through these terms before beginning the survey. You will participate by ticking the <i>Start</i> box below. You may ask any questions before taking part by contacting the researcher (details below).</p>
         <p>We, the University of Oxford, are investigating Machine Learning models in decision-support systems. You will be presented with a sequence of information on a machine learning model, followed by interactive patient scenarios and risk scores as may be presented by a decision-support system relying on the model described. You will then be asked to rate your confidence level with utilizing the system for decision-making purposes and support your answers.</p>
         <p>The full survey should take about 15-20 minutes. No background knowledge is required. Your results will be utilised to determine the best interpretability modules and types of evidence to present to potential users of medical decision-support systems powered by machine learning models, and will be collected and utilised by the Computer Science and Engineering Departments at Oxford. <b>No personally identifiable information will be collected or shared</b>.</p>
-    <h5>Do I have to take part?</h5>
+    <h3>Do I have to take part?</h3>
         <p>Please note that your participation is voluntary. You may withdraw at any point during the questionnaire for any reason, before submitting your answers, by closing the browser. None of your answers will then be collected.</p>
-    <h5>How will your data be used?</h5>
+    <h3>How will your data be used?</h3>
         <p>Your answers will be completely anonymous, and we will use all reasonable endeavours to keep them confidential. No personally identifiable information, including but not limited to IP address, email address, or name, will be requested or collected.</p>
+        <p>Information collected will be limited to nation of practice and area of expertise.</p>
         <p>Your answers will be stored in a password-protected file and may be used in academic publications. Your IP address will not be stored. Research data will be stored for a minimum of three years after publication or public release.</p>
-    <h5>Who will have access to your data?</h5>
+    <h3>Who will have access to your data?</h3>
         <p>The University of Oxford is the data controller for the purposes of the Data Protection Act 1998.</p>
         <p>We would like your permission to use your unidentifiable data in future studies, and to share data with other researchers (e.g. in online databases).</p>
         <p>Any personal information that could identify you will not be collected or be removed before files are shared with other researchers or results are made public.</p>
-        <p>This survey is for an MSc project. The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar of the Oxford Man Institute. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
-    <h5>What if there is a problem?</h5>
+        <p>The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar of the Oxford Man Institute. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
+    <h3>What if there is a problem?</h3>
         <p>If you have a concern about any aspect of this project, please speak to the researcher at oren.lahav@gtc.ox.ac.uk who will do his best to answer your query. The researcher should acknowledge your concern within 10 working days and give you an indication of how they intend to deal with it.</p>
         <p>If you are over 18 and have read the information above and agree to participate with the understanding that the data (including any personal data) you submit will be processed accordingly, please click the ‘Start’ box below to get started. By doing so you will be providing your consent to participate.</p>
   </div>
@@ -62,8 +63,11 @@
      <h3>Start</h3>
      <p>This version of the survey is designed for <b>Medical Doctors</b> with clinical experience.</p>
      <p>If you are ready to begin, please <b>enter your passcode</b> and press start:</p>
-     <textarea comments cols=50 rows=1 placeholder='Passcode' class = 'passcode' name='passcode'></textarea><br/><br/>
-     <button class = 'StartButton'>Start</button>
+     <form class='startForm'>
+        <textarea comments cols=50 rows=2 placeholder='Passcode' class = 'passcode' name='passcode'></textarea><br/><br/>
+        <button class = 'StartButton'>Start</button>
+     </form>
+     
   </div>
 
  <div id = 'Rest'></div>
@@ -112,7 +116,7 @@
     <div class = 'Evidence2'>
             <h3>Model Training and Implementation</h3>
             <p>The model utilised was a Neural Network, a sophisticated deep learning algorithm that has seen increased attention in recent years, as multiple studies have shown it to vastly outperform simpler linear models and other methods that have been traditionally utilised to generate risk scores in medicine.</p>
-            <p>A <b>neural network</b> is a Machine Learning algorithm inspired by the human brain, utilizing <b>connected nodes</b> organised in <b>hidden layers</b>. With a single node and layer, the network would be essentially equivalent to a the linear predictive model known as Logistic Regression. However, adding nodes and layers enables the network to learn more complex, non-linear patterns in the data.</p><p>The network uses optimization techniques and non-linear activation functions to automatically discover these complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
+            <p>A <b>neural network</b> is a Machine Learning algorithm inspired by the human brain, utilizing <b>connected nodes</b> organised in <b>hidden layers</b>. With a single node and layer, the network would be essentially equivalent to the linear predictive model known as Logistic Regression. However, adding nodes and layers enables the network to learn more complex, non-linear patterns in the data.</p><p>The network uses optimization techniques and non-linear activation functions to automatically discover these complex patterns and learn how to make predictions from data. You can find more information <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank">here</a>.</p>
             <p>Below is a generic image of a neural network by Machine Learning expert <a href="http://neuralnetworksanddeeplearning.com/chap1.html" target="_blank">Michael Nielsen</a>:</p>
             <p style="text-align:center;"><img src="NN.png" style="width:500px;"></p>
             <p>The network takes in a large amount of data, in the form of patient characteristics or features, and outputs the probability of a patient dying within 1 year of a heart failure event.</p>
@@ -206,7 +210,7 @@
                 <h4>Rate your confidence</h4>
                 <p>Please consider the following question based on <b>all</b> the Model information and evidence seen so far:</p>
                 <div class = 'EFinal' class='evForm'>
-                        <p>Based on the information seen so far, how would you rate your confidence in the machine learning model and the decision-support system based on it?</p>
+                        <p>Based on the information seen so far, how would you rate your confidence in the machine learning model and a decision-support system based on it?</p>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=0> 1: <b>Not at all confident</b>, would not even consider looking at the model and its prediction as part of my decision-making process<br>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=1> 2: <b>Not very confident</b>, unlikely to consider model<br>
                         <input type='radio' name='EFinal' class='EFinal' class='evForm' value=2> 3: <b>Somewhat confident</b>, may consult model but unlikely to rely on it in any way <br>
@@ -232,7 +236,7 @@
         <p>The following diagram explains the purpose and workings of a Decision Support System (DSS) powered by the Neural Network method described in Part 1:</p>
         <p style="text-align:center;"><img src="DSSDiagram.png" style="width:700px;"></p>
         <p>Note that the DSS is based on the Neural Network trained on data of over 30,000 patients. As new patients consult with their doctors, the clinician may refer to the decision-support system. The DSS will produce a predicted risk score based on the patient's characteristics, and may additionally output relevant local, high-interpretable linear or decision-tree models. The information produced may be utilised by a clinician to inform medical actions and impact patient outcomes.</p><br/>
-        <p>Starting on the next screen, you will be presented with a series of patients.</p>
+        <p>Starting on the next screen, you will be presented with a series of 4 patient scenarios.</p>
         <p>Note that these patients were <i>not</i> part of the model's training set, and have been selected <i>at random.</i></p>
         <p>Each patient will be accompanied by a risk score generated using the Neural Network model discussed previously. In addition, medical information about the individual patients will be presented as well.</p>
         <p>Please evaluate this information, and rate your satisfaction with the model and the Decision Support System as a whole.</p>
@@ -712,6 +716,7 @@
                         {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
                         //{seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part2G', seq : ['G'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -746,6 +751,7 @@
                         {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
                         //{seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part2G', seq : ['G'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -780,6 +786,7 @@
                         {seqCode:'Part2D', seq : ['D'], numTries: 0, currentMean : 2, currentUCB : 10},
                         {seqCode:'Part2E', seq : ['E'], numTries: 0, currentMean : 2, currentUCB : 10},
                         //{seqCode:'Part2F', seq : ['F'], numTries: 0, currentMean : 2, currentUCB : 10}
+                        {seqCode:'Part2G', seq : ['G'], numTries: 0, currentMean : 2, currentUCB : 10}
                     ]
                 }
             ]
@@ -1347,13 +1354,15 @@
 
 
         //Initiate survey:
-        $('.startButton').on('click', function(e){
+        $('.startForm').on('submit', function(e){
 
-            if($('.passcode').val() != '')
+            e.preventDefault();
+
+            if($('.passcode').val() == 'MLDSSSTUDY')
             {
 
             //Prevent page from refreshing
-            e.preventDefault();
+            //e.preventDefault();
 
             console.log($('.passcode').val());
             pass = $('.passcode').val();
@@ -1463,13 +1472,13 @@
             }
             else if (seqToRun[userContext][Part1Length] == 'D')
             {
-                $('.P1INT').show(); 
+                //$('.P1INT').show(); 
                 $('.P1OUT').show();
                 $('.P1SLIM').show();   
             }   
             else if (seqToRun[userContext][Part1Length] == 'E')
             {
-                $('.P1INT').show(); 
+               // $('.P1INT').show(); 
                 $('.P1OUT').show();
                 $('.P1TREE').show();   
             }   
@@ -1479,6 +1488,11 @@
                 $('.P1OUT').show();
                 $('.P1SLIM').show();  
                 $('.P1TREE').show();  
+            }   
+            else if (seqToRun[userContext][Part1Length] == 'G')
+            {
+                $('.P1INT').show(); 
+                $('.P1OUT').show();
             }   
         })
 
@@ -1520,13 +1534,13 @@
                     }
                     else if (seqToRun[userContext][Part1Length] == 'D')
                     {
-                        $('.P'+nextPatient+'INT').show(); 
+                        //$('.P'+nextPatient+'INT').show(); 
                         $('.P'+nextPatient+'OUT').show();
                         $('.P'+nextPatient+'SLIM').show();   
                     }    
                     else if (seqToRun[userContext][Part1Length] == 'E')
                     {
-                        $('.P'+nextPatient+'INT').show(); 
+                        //$('.P'+nextPatient+'INT').show(); 
                         $('.P'+nextPatient+'OUT').show();
                         $('.P'+nextPatient+'TREE').show();   
                     }    
@@ -1536,6 +1550,11 @@
                         $('.P'+nextPatient+'OUT').show();
                         $('.P'+nextPatient+'SLIM').show();   
                         $('.P'+nextPatient+'TREE').show();
+                    }    
+                    else if (seqToRun[userContext][Part1Length] == 'G')
+                    {
+                        $('.P'+nextPatient+'INT').show(); 
+                        $('.P'+nextPatient+'OUT').show();   
                     }    
                 }
 
@@ -1574,7 +1593,7 @@
                     reason: $('.rateMLText').val()
                 };
 
-                                $('.rateML').hide();
+                $('.rateML').hide();
                 $('.participantDetails').show();
 
             }
