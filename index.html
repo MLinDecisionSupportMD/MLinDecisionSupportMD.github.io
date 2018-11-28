@@ -9,7 +9,7 @@
   <div id='Intro'>
   <head>
  <h1>
-  Machine Learning and Decision Support Study (MLaDS)
+  Machine Learning in Prognostic Decision-Support Systems Study
  </h1>
 </head>
 
@@ -18,11 +18,11 @@
   <h3>Details</h3>
   <p>
     Thank you for your interest in our study.</br>
-    The primary purpose of developing machine learning models for medicine is to help doctors synthesize the vast amount of information captured in the medical record in order to support decision making. This includes improving on prognostic and diagnostic scoring systems and developing algorithms to help support treatment choices.<br/> 
+    The primary purpose of developing <b>machine learning models for medicine</b> is to help doctors synthesize the vast amount of information captured in the medical record in order to support decision making. This includes improving on prognostic and diagnostic scoring systems and developing algorithms to help support treatment choices.<br/> 
     The goal of this study is to understand whether and how complimentary information about machine learning models, including popular interpretability modules designed to provide additional information, can support doctors in their decisions to adopt a particular decision support model by increasing trust and confidence in the model's predictions.<br/>
     Many risk scores are currently embedded in electronic health records; however these are based on logic rules and simpler statistical methods rather than Machine Learning algorithms, which can provide increased accuracy and other benefits, but may have perceived limitations in areas such as interpretability.<br/>
     We are specifically looking to make Machine Learning algorithms more <i>transparent, explainable</i>, and <i>interpretable</i> by discovering how different model information and decision-support system design choices affect the confidence of medical experts in such systems.<br/>   
-    In this study we will ask you to assess your trust in a real, trained machine learning model developed to help cardiologists estimate the probability of 12 month survival for patients that have just experienced heart failure. This may assist clinicians in making decisions regarding patient interactions and recommendations. All information about the development and accuracy of the model refers to real data about a model we developed and trained.<br/>
+    In this study we will ask you to assess your confidence and trust in a real, trained machine learning model developed to help cardiologists estimate the probability of 12 month survival for patients that have just experienced heart failure. This may assist clinicians in making decisions regarding patient interactions and recommendations. All information about the development and accuracy of the model refers to real data about a model we developed and trained.<br/>
     The study proceeds in two stages:
     <ol>
         <li><b>About the model</b>, which introduces and presents information regarding the <b>Neural Network</b> powering our Decision-Support System</li>
@@ -57,7 +57,7 @@
         <p>Any personal information that could identify you will not be collected or be removed before files are shared with other researchers or results are made public.</p>
         <p>The principal researcher is Owen Lahav, who is attached to the Department of Computer Science at the University of Oxford. This project is being completed under the supervision of Mihaela van der Schaar of the Oxford Man Institute. This project has been reviewed by the University of Oxford’s Department of Computer Science’s Research Ethics Committee.</p>
     <h3>What if there is a problem?</h3>
-        <p>If you have a concern about any aspect of this project, please speak to the researcher at oren.lahav@gtc.ox.ac.uk who will do his best to answer your query. The researcher should acknowledge your concern within 10 working days and give you an indication of how they intend to deal with it.</p>
+        <p>If you have a concern about any aspect of this project, please speak to the researcher at owen.lahav@gtc.ox.ac.uk who will do his best to answer your query. The researcher should acknowledge your concern within 10 working days and give you an indication of how they intend to deal with it.</p>
         <p>If you are over 18 and have read the information above and agree to participate with the understanding that the data (including any personal data) you submit will be processed accordingly, please click the ‘Start’ box below to get started. By doing so you will be providing your consent to participate.</p>
   </div>
 
@@ -88,7 +88,7 @@
  <div class = 'IntroPart1'>
         <h2><b>Part 1</b>: About the Model</h2>
         <p>Starting on the next screen, you will be presented with information and evidence about the Machine Learning Model that was used to create a decision-support system.</p>
-        <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your comprehension of, and confidence in, the decision-support system based on it.</p>
+        <p>Please review each piece of information about the model and indicate whether you find it personally useful in increasing your <b>confidence</b> in the decision-support system based on it.</p>
         <p>Click 'Next' to proceed</p>
         <button class='StartPart1Button'>Next</button>
  </div>
@@ -335,12 +335,12 @@
 
         <hr style="border-top: dotted 1px;" />
         <div class = 'P1Q'>
-            <p>Based on the information seen so far, including <b>Patient Adam</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                    <input type='radio' name='P1Q' class='P1Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                    <input type='radio' name='P1Q' class='P1Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+            <p>Based on the information seen so far, including <b>Patient Adam</b>, do you trust the model's prediction? How satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                    <input type='radio' name='P1Q' class='P1Q' value=0> 1: <b>Completely unsatisfied</b>, I have no trust in the model's prediction and am not at all likely to use the system in supporting my medical decision-making for similar heart failure patients<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=1> 2: <b>Fairly unsatisfied</b>, I do not trust the model's prediction and am not likely to use the system<br>
                     <input type='radio' name='P1Q' class='P1Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                    <input type='radio' name='P1Q' class='P1Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                    <input type='radio' name='P1Q' class='P1Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                    <input type='radio' name='P1Q' class='P1Q' value=3> 4: <b>Somewhat satisfied</b>, I somewhat trust the model's prediction and am likely to at least take a look at the system's predicted risk score<br>
+                    <input type='radio' name='P1Q' class='P1Q' value=4> 5: <b>Highly satisfied</b>, I trust the model's prediction and am very likely to consult the system and its prediction as part of my medical decision-making for similar heart failure patients <br>
                     <p>Please provide any comments or reasons supporting your answer. In particular, you may specify which components above were most helpful in establishing your trust in the model and predicted risk output. <i>Note that anonymised direct quotes may be used in publications and presentation.</i></p>
                     <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P1QText' name='P1QText'></textarea><br/>
                     <button class = 'patientFormButton'>Next</button>
@@ -422,12 +422,12 @@
 
             <hr style="border-top: dotted 1px;" />
             <div class = 'P2Q'>
-                    <p>Based on the information seen so far, including <b>Patient Betty</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P2Q' class='P2Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P2Q' class='P2Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <p>Based on the information seen so far, including <b>Patient Betty</b>, do you trurst the model's prediction? How satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P2Q' class='P2Q' value=0> 1: <b>Completely unsatisfied</b>, I have no trust in the model's prediction and am not at all likely to use the system in supporting my medical decision-making for similar heart failure patients<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=1> 2: <b>Fairly unsatisfied</b>, I do not trust the model's prediction and am not likely to use the system<br>
                             <input type='radio' name='P2Q' class='P2Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P2Q' class='P2Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P2Q' class='P2Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <input type='radio' name='P2Q' class='P2Q' value=3> 4: <b>Somewhat satisfied</b>, I somewhat trust the model's prediction and am likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P2Q' class='P2Q' value=4> 5: <b>Highly satisfied</b>, I trust the model's prediction and am very likely to consult the system and its prediction as part of my medical decision-making for similar heart failure patients <br>
                             <p>Please provide any comments or reasons supporting your answer. In particular, you may specify which components above were most helpful in establishing your trust in the model and predicted risk output. <i>Note that anonymised direct quotes may be used in publications and presentation.</i></p>
                             <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P2QText' name='P2QText'></textarea><br/>
                             <button class = 'patientFormButton'>Next</button>
@@ -508,12 +508,12 @@
 
             <hr style="border-top: dotted 1px;" />
             <div class = 'P3Q'>
-                    <p>Based on the information seen so far, including <b>Patient Clara</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P3Q' class='P3Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P3Q' class='P3Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <p>Based on the information seen so far, including <b>Patient Clara</b>, do you trust the model's prediction? How satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P3Q' class='P3Q' value=0> 1: <b>Completely unsatisfied</b>, I have no trust in the model's prediction and am not at all likely to use the system in supporting my medical decision-making for similar heart failure patients<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=1> 2: <b>Fairly unsatisfied</b>, I do not trust the model's prediction and am not likely to use the system<br>
                             <input type='radio' name='P3Q' class='P3Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P3Q' class='P3Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P3Q' class='P3Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <input type='radio' name='P3Q' class='P3Q' value=3> 4: <b>Somewhat satisfied</b>, I somewhat trust the model's prediction and am likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P3Q' class='P3Q' value=4> 5: <b>Highly satisfied</b>, I trust the model's prediction and am very likely to consult the system and its prediction as part of my medical decision-making for similar heart failure patients <br>
                             <p>Please provide any comments or reasons supporting your answer. In particular, you may specify which components above were most helpful in establishing your trust in the model and predicted risk output. <i>Note that anonymised direct quotes may be used in publications and presentation.</i></p>
                             <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P3QText' name='P3QText'></textarea><br/>
                             <button class = 'patientFormButton'>Next</button>
@@ -591,12 +591,12 @@
             
             <hr style="border-top: dotted 1px;" />
             <div class = 'P4Q'>
-                    <p>Based on the information seen so far, including <b>Patient Drew</b>, how satisfied are you with the Decision Support System powered by a Neural Network model?</p>
-                            <input type='radio' name='P4Q' class='P4Q' value=0> 1: <b>Completely unsatisfied</b>, not at all likely to use the system in supporting my medical decision-making for heart failure patients<br>
-                            <input type='radio' name='P4Q' class='P4Q' value=1> 2: <b>Fairly unsatisfied</b>, not likely to use the system<br>
+                    <p>Based on the information seen so far, including <b>Patient Drew</b>, do you trust the model's prediction? How satisfied are you with the Decision Support System powered by a Neural Network model?</p>
+                            <input type='radio' name='P4Q' class='P4Q' value=0> 1: <b>Completely unsatisfied</b>, I have no trust in the model's prediction and am not at all likely to use the system in supporting my medical decision-making for similar heart failure patients<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=1> 2: <b>Fairly unsatisfied</b>, I do not trust the model's prediction and am not likely to use the system<br>
                             <input type='radio' name='P4Q' class='P4Q' value=2> 3: <b>Neither satisfied nor unsatisfied</b>, may or may not consult system<br>
-                            <input type='radio' name='P4Q' class='P4Q' value=3> 4: <b>Somewhat satisfied</b>, likely to at least take a look at the system's predicted risk score<br>
-                            <input type='radio' name='P4Q' class='P4Q' value=4> 5: <b>Highly satisfied</b>, very likely to consult the system and its prediction as part of my medical decision-making for heart failure patients <br>
+                            <input type='radio' name='P4Q' class='P4Q' value=3> 4: <b>Somewhat satisfied</b>, I somewhat trust the model's prediction and am likely to at least take a look at the system's predicted risk score<br>
+                            <input type='radio' name='P4Q' class='P4Q' value=4> 5: <b>Highly satisfied</b>, I trust the model's prediction and am very likely to consult the system and its prediction as part of my medical decision-making for similar heart failure patients <br>
                             <p>Please provide any comments or reasons supporting your answer. In particular, you may specify which components above were most helpful in establishing your trust in the model and predicted risk output. <i>Note that anonymised direct quotes may be used in publications and presentation.</i></p>
                             <textarea comments cols=100 rows=5 placeholder='Comments...' class = 'P4QText' name='P4QText'></textarea><br/>
                             <button class = 'patientFormButton'>Next</button>
@@ -629,14 +629,16 @@
         <div class = 'expForm'>
             <p>A. Please specify your area of medical expertise (ex. cardiology, internal medicine, generalist, etc.)</p>
             <textarea comments cols=50 rows=1 placeholder='Unspecified' class = 'expText' name='expText'></textarea><br/>
-            <p>B. In what country do you currently practice medicine? (if more than one country list both, if not currently practicing, list the last country that you practiced in and indicate that you are retired/ not currently practicing)</p>
+            <p>B. How many years have you been practicing, roughly? If you are currently a resident, please specify.</p>
+            <textarea comments cols=50 rows=1 placeholder='Num. years' class = 'expYears' name='expYears'></textarea><br/>
+            <p>C. In what country do you currently practice medicine? (if more than one country list both, if not currently practicing, list the last country that you practiced in and indicate that you are retired/ not currently practicing)</p>
             <textarea comments cols=50 rows=1 placeholder='United Kingdom' class = 'expNation' name='expNation'></textarea><br/>
-            <p>C. Which of the following best describe your past experience with machine learning prior to taking this survey?</p>
+            <p>D. Which of the following best describe your past experience with machine learning prior to taking this survey?</p>
                     <input type='radio' name='exp1' class='exp1' value=0> 1: I knew very little about machine learning and its applicability to medicine<br>
                     <input type='radio' name='exp1' class='exp1' value=1> 2: I have had a basic understanding of machine learning and have heard the term 'neural network' before<br>
                     <input type='radio' name='exp1' class='exp1' value=2> 3: I have had a good idea of what machine learning is and how it can contribute to the medical field<br>
                     <input type='radio' name='exp1' class='exp1' value=3> 4: I am a practitioner of machine learning and have utilized it in research or practice in the past<br>
-            <p>D. Which of the following best describe your experience with decision-support systems prior to taking this survey?</p>
+            <p>E. Which of the following best describe your experience with decision-support systems prior to taking this survey?</p>
                     <input type='radio' name='exp2' class='exp2' value=0> 1: I have not heard of them or have never had a chance to interact with them in the past<br>
                     <input type='radio' name='exp2' class='exp2' value=1> 2: I have had a negative experience intreacting with decision-support systems in the past, and feel that I would not readily trust them<br>
                     <input type='radio' name='exp2' class='exp2' value=2> 3: I have had a positive experience interacting with decision-support systems in the past, and see high value in such systems<br>
@@ -658,7 +660,7 @@
         </ul>
     </p>
     <p><i>Note that anonymised direct quotes may be used in publications and presentation.</i><br/><b>Important:</b> Do <b>not</b> include any personally identifiable information, such as name or email address, in your answer below.</p>
-    <p>You may also email the primary researcher at oren.lahav@gtc.ox.ac.uk.</p>
+    <p>You may also email the primary researcher at owen.lahav@gtc.ox.ac.uk.</p>
     <form class = 'commentForm' id = 'Feedback'>
         <textarea comments cols=120 rows=5 placeholder='Feedback:' class='feedbacktext' name='feedbacktext' form = 'Feedback'></textarea>
         <br />
@@ -1372,7 +1374,7 @@
 
             e.preventDefault();
 
-            if($('.passcode').val() == 'MLDSSSTUDY')
+            if($('.passcode').val().substring(0,10) == 'MLDSSSTUDY')
             {
 
             //Prevent page from refreshing
@@ -1488,13 +1490,13 @@
             else if (seqToRun[userContext][Part1Length] == 'D')
             {
                 //$('.P1INT').show(); 
-                $('.P1OUT').show();
+                //$('.P1OUT').show();
                 $('.P1SLIM').show();   
             }   
             else if (seqToRun[userContext][Part1Length] == 'E')
             {
-               // $('.P1INT').show(); 
-                $('.P1OUT').show();
+                //$('.P1INT').show(); 
+                //$('.P1OUT').show();
                 $('.P1TREE').show();   
             }   
             else if (seqToRun[userContext][Part1Length] == 'F')
@@ -1507,7 +1509,7 @@
             else if (seqToRun[userContext][Part1Length] == 'G')
             {
                 $('.P1INT').show(); 
-                $('.P1OUT').show();
+                //$('.P1OUT').show();
             }   
         })
 
@@ -1621,6 +1623,7 @@
                 preprofile = []
 
                 preprofile.push($('.expText').val());
+                preprofile.push($('.expYears').val());
                 preprofile.push($('.expNation').val());
                 preprofile.push($('input[name=exp1]:checked').val());
                 preprofile.push($('input[name=exp2]:checked').val());
